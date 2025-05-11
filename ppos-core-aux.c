@@ -11,7 +11,26 @@
 //
 // ****************************************************************************
 
+task_t * scheduler() { //felipe
+    if (readyQueue != NULL) {
+        return readyQueue;
+    }
+    return NULL;
+}
 
+void task_setprio (task_t *task, int prio){
+
+}
+
+int task_getprio (task_t *task){
+    return 0;
+}
+
+unsigned int _systemTime;
+
+unsigned int systime () { //felipe
+    return _systemTime; 
+}
 
 void before_ppos_init () {
     // put your customization here
