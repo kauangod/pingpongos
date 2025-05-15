@@ -27,7 +27,8 @@ typedef struct task_t
    void* custom_data; // internal data - do not modify!
 
    // ... (outros/novos campos deve ser adicionados APOS esse comentario)
-
+   
+   int prio_e, prio_d; // prioridade estatica e dinamica    
 
 } task_t ;
 

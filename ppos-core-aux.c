@@ -1,7 +1,7 @@
 #include "ppos.h"
 #include "ppos-core-globals.h"
 #include "ppos-disk-manager.h"
-
+#define ALPHA -1 //mod
 
 // ****************************************************************************
 // Adicione TUDO O QUE FOR NECESSARIO para realizar o seu trabalho
@@ -11,19 +11,56 @@
 //
 // ****************************************************************************
 
-task_t * scheduler() { //felipe
-    if (readyQueue != NULL) {
-        return readyQueue;
+task_t * scheduler(){ 
+    if(readyQueue == NULL) {
+        printf("Fila de tarefas prontas vazia\n");
+        return NULL;
     }
-    return NULL;
+    task_t *first = readyQueue;
+    if(first != first->next){
+        int maxPrio = 21;
+        task_t *taskMaxPrio = NULL;
+        task_t *task = first;
+        do{
+            if(task->prio_d < maxPrio){
+                maxPrio = task->prio_d;
+                taskMaxPrio = task;
+            }
+            task = task->next;
+        }while(task!=first);
+
+        task = first;
+
+        do{
+            if(task != taskMaxPrio){
+                task->prio_d = task->prio_d + ALPHA;
+            }
+            task = task->next;
+        }while(task!=first);
+
+        taskMaxPrio->prio_d = taskMaxPrio->prio_e;
+
+        return taskMaxPrio;
+    }
+    return readyQueue;
 }
 
 void task_setprio (task_t *task, int prio){
-
+    if(prio < -20 || prio > 20){
+        printf("Prioridade fora do intervalo permitido\n");
+    }
+    if(task == NULL){
+        taskExec->prio_e = prio;
+    } else {
+        task->prio_e = prio;
+    }
 }
 
 int task_getprio (task_t *task){
-    return 0;
+    if(task == NULL) {
+        return taskExec->prio_e;
+    }
+    return task->prio_e;
 }
 
 unsigned int _systemTime;
@@ -54,7 +91,7 @@ void before_task_create (task_t *task ) {
 #endif
 }
 
-void after_task_create (task_t *task ) {
+void after_task_create(task_t *task){
     // put your customization here
 #ifdef DEBUG
     printf("\ntask_create - AFTER - [%d]", task->id);
