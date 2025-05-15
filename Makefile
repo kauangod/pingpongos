@@ -1,10 +1,10 @@
 CFLAGS = -Wall
 dep = ppos-core-aux.c ppos-all.o queue.o
 
-.PHONY: all preempcao dispatcher prio
+.PHONY: all preempcao dispatcher prio scheduler
 
 all:
-	@echo "Passe 'preempcao', 'dispatcher' ou 'prio'" 
+	@echo "Passe 'preempcao', 'dispatcher', 'prio', 'scheduler'" 
 
 preempcao: pingpong-preempcao.c 
 	gcc $(CFLAGS) -o $@ $< $(dep)
@@ -20,6 +20,11 @@ prio: pingpong-contab-prio.c
 	gcc $(CFLAGS) -o $@ $< $(dep)
 	./$@
 	rm -f $@
+	
+scheduler: pingpong-scheduler.c
+	gcc $(CFLAGS) -o $@ $< $(dep)
+	./$@
+	rm -f $@
 
 clean:
-	rm -f preempcao dispatcher prio
+	rm -f preempcao dispatcher prio scheduler
