@@ -1,7 +1,7 @@
 #include "ppos.h"
 #include "ppos-core-globals.h"
 #include "ppos-disk-manager.h"
-#define ALPHA -1 //mod
+
 
 // ****************************************************************************
 // Adicione TUDO O QUE FOR NECESSARIO para realizar o seu trabalho
@@ -10,6 +10,29 @@
 // estruturas e funções
 //
 // ****************************************************************************
+
+#include <signal.h>
+#include <sys/time.h>
+#define ALPHA -1 //mod
+#define QUANTUM 20 //mod
+unsigned int _systemTime; //mod
+
+// estrutura que define um tratador de sinal (deve ser global ou static)
+struct sigaction action ;
+
+// estrutura de inicialização to timer
+struct itimerval timer ;
+
+// tratador do sinal
+void handler (int signum)
+{   
+    _systemTime++;
+    if(taskExec->userTask){
+        taskExec->ticks--;
+        if(taskExec->ticks <= 0) //==0 não funciona (?)
+            task_yield();
+    }
+}
 
 task_t * scheduler(){ 
     if(readyQueue == NULL) {
@@ -38,34 +61,32 @@ task_t * scheduler(){
             task = task->next;
         }while(task!=first);
 
-        taskMaxPrio->prio_d = taskMaxPrio->prio_e;
+        taskMaxPrio->prio_d = taskMaxPrio->prio_s;
 
         return taskMaxPrio;
     }
     return readyQueue;
 }
 
-void task_setprio (task_t *task, int prio){
+void task_setprio (task_t *task, int prio){ //nao deveria alterar a prio_d tbm?
     if(prio < -20 || prio > 20){
         printf("Prioridade fora do intervalo permitido\n");
     }
     if(task == NULL){
-        taskExec->prio_e = prio;
+        taskExec->prio_s = prio;
     } else {
-        task->prio_e = prio;
+        task->prio_s = prio;
     }
 }
 
 int task_getprio (task_t *task){
     if(task == NULL) {
-        return taskExec->prio_e;
+        return taskExec->prio_s;
     }
-    return task->prio_e;
+    return task->prio_s;
 }
 
-unsigned int _systemTime;
-
-unsigned int systime () { //felipe
+unsigned int systime (){ 
     return _systemTime; 
 }
 
@@ -77,7 +98,29 @@ void before_ppos_init () {
 }
 
 void after_ppos_init () {
-    // put your customization here
+    //copiado do timer.c
+    // registra a ação para o sinal de timer SIGALRM
+  action.sa_handler = handler ;
+  sigemptyset (&action.sa_mask) ;
+  action.sa_flags = 0 ;
+  if (sigaction (SIGALRM, &action, 0) < 0)
+  {
+    perror ("Erro em sigaction: ") ;
+    exit (1) ;
+  }
+
+  // ajusta valores do temporizador
+  timer.it_value.tv_usec = 1000 ;      // primeiro disparo, em micro-segundos
+  timer.it_value.tv_sec  = 0 ;      // primeiro disparo, em segundos
+  timer.it_interval.tv_usec = 1000 ;   // disparos subsequentes, em micro-segundos
+  timer.it_interval.tv_sec  = 0 ;   // disparos subsequentes, em segundos
+
+  // arma o temporizador ITIMER_REAL (vide man setitimer)
+  if (setitimer (ITIMER_REAL, &timer, 0) < 0)
+  {
+    perror ("Erro em setitimer: ") ;
+    exit (1) ;
+  }
 #ifdef DEBUG
     printf("\ninit - AFTER");
 #endif
@@ -92,7 +135,14 @@ void before_task_create (task_t *task ) {
 }
 
 void after_task_create(task_t *task){
-    // put your customization here
+    task_setprio(task,0); //mod
+    task->ticks = QUANTUM; //mod
+    if(task == taskDisp || task == taskMain){
+        task->userTask = 0;
+    }
+    else{
+        task->userTask = 1;
+    }
 #ifdef DEBUG
     printf("\ntask_create - AFTER - [%d]", task->id);
 #endif
