@@ -17,7 +17,7 @@ typedef struct task_t
    struct task_t *prev, *next ;		// ponteiros para usar em filas
    int id ;				// identificador da tarefa
    ucontext_t context ;			// contexto armazenado da tarefa
-   unsigned char state;  // indica o estado de uma tarefa (ver defines no final do arquivo ppos.h): 
+   unsigned char state;  // indica o estado de uma tarefa (ver defines no final do arquivo ppos.h):
                           // n - nova, r - pronta, x - executando, s - suspensa, e - terminada
    struct task_t* queue;
    struct task_t* joinQueue;
@@ -27,13 +27,17 @@ typedef struct task_t
    void* custom_data; // internal data - do not modify!
 
    // ... (outros/novos campos deve ser adicionados APOS esse comentario)
-   
+
    int prio_s, prio_d; // prioridade estatica e dinamica
-   
+
    int ticks; // contador de ticks
 
    int userTask; // indica se a tarefa é de usuario ou do sistema
-
+   unsigned int processor_time; // acumulador de tempo de processador
+   unsigned int activation_count; // contador de ativações
+   unsigned int create_time; // tempo de criação da tarefa
+   unsigned int execution_time; // tempo de execução da tarefa
+   unsigned int last_activation_time; // tempo que a tarefa ganha o processador
 } task_t ;
 
 // estrutura que define um semáforo
@@ -67,11 +71,11 @@ typedef struct {
     int messageSize;
     int maxMessages;
     int countMessages;
-    
+
     semaphore_t sBuffer;
     semaphore_t sItem;
     semaphore_t sVaga;
-    
+
     unsigned char active;
 } mqueue_t ;
 

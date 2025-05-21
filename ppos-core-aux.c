@@ -5,8 +5,8 @@
 
 // ****************************************************************************
 // Adicione TUDO O QUE FOR NECESSARIO para realizar o seu trabalho
-// Coloque as suas modificações aqui, 
-// p.ex. includes, defines variáveis, 
+// Coloque as suas modificações aqui,
+// p.ex. includes, defines variáveis,
 // estruturas e funções
 //
 // ****************************************************************************
@@ -15,14 +15,8 @@
 #include <sys/time.h>
 #define ALPHA -1 //mod
 #define QUANTUM 20 //mod
+#define DEBUG
 unsigned int _systemTime = 0;
-
-//perguntas:
-// task_yield
-// o handler faz task_yield?
-// setar prioridade direto?
-// só seta a prio_s mesmo?
-// posso copiar do timer.c?
 
 // estrutura que define um tratador de sinal (deve ser global ou static)
 struct sigaction action ;
@@ -32,8 +26,8 @@ struct itimerval timer ;
 
 // tratador do sinal
 void handler (int signum)
-{   
-    _systemTime++;
+{
+    _systemTime++; // milissegundos
     if(preemption)
         if(taskExec->userTask){
             taskExec->ticks--;
@@ -46,7 +40,7 @@ void handler (int signum)
         }
 }
 
-task_t * scheduler(){ 
+task_t* scheduler(){
     if(readyQueue == NULL) {
         printf("Fila de tarefas prontas vazia\n");
         return NULL;
@@ -105,8 +99,8 @@ int task_getprio (task_t *task){
     return task->prio_s;
 }
 
-unsigned int systime (){ 
-    return _systemTime; 
+unsigned int systime (){
+    return _systemTime;
 }
 
 void before_ppos_init () {
@@ -140,13 +134,14 @@ void after_ppos_init () {
         perror ("Erro em setitimer: ") ;
         exit (1) ;
     }
-
+    taskMain->last_activation_time = _systemTime; // main tempo de ativação (0)
+    taskMain->activation_count = 1; // main contador de ativações (1)
 //   preemption = 0; //mod
 
 #ifdef DEBUG
     printf("\ninit - AFTER");
 #endif
-    
+
 }
 
 void before_task_create (task_t *task ) {
@@ -159,6 +154,12 @@ void before_task_create (task_t *task ) {
 void after_task_create(task_t *task){
     task_setprio(task,0); //mod
     task->ticks = QUANTUM; //mod
+    task->create_time = _systemTime;
+    task->activation_count = 0;
+    task->processor_time = 0;
+    task->execution_time = 0;
+    task->last_activation_time = 0;
+
     if(task == taskDisp || task == taskMain){
         task->userTask = 0;
     }
@@ -168,11 +169,12 @@ void after_task_create(task_t *task){
 #ifdef DEBUG
     printf("\ntask_create - AFTER - [%d]", task->id);
 #endif
-    
+
 }
 
 void before_task_exit () {
     // put your customization here
+    taskExec->execution_time = _systemTime - taskExec->create_time;
 #ifdef DEBUG
     printf("\ntask_exit - BEFORE - [%d]", taskExec->id);
 #endif
@@ -180,22 +182,32 @@ void before_task_exit () {
 
 void after_task_exit () {
     // put your customization here
+    printf("Task %d exit: execution time %u ms, processor time %u ms, %u activations\n",
+    taskExec->id, taskExec->execution_time, taskExec->processor_time, taskExec->activation_count);
 #ifdef DEBUG
     printf("\ntask_exit - AFTER- [%d]", taskExec->id);
 #endif
-    
+
 }
 
 void before_task_switch ( task_t *task ) {
     // put your customization here
+    if(task == taskMain && taskExec == taskDisp){
+        printf("Task %d exit: execution time %u ms, processor time %u ms, %u activations\n",
+        taskExec->id, taskExec->execution_time, taskExec->processor_time, taskExec->activation_count);
+        // Infos task dispatcher
+    }
 #ifdef DEBUG
     printf("\ntask_switch - BEFORE - [%d -> %d]", taskExec->id, task->id);
 #endif
-    
+
 }
 
 void after_task_switch ( task_t *task ) {
     // put your customization here
+    //taskExec->last_activation_time = _systemTime;
+    //taskExec->activation_count++;
+
 #ifdef DEBUG
     printf("\ntask_switch - AFTER - [%d -> %d]", taskExec->id, task->id);
 #endif
@@ -203,12 +215,15 @@ void after_task_switch ( task_t *task ) {
 
 void before_task_yield () {
     // put your customization here
+
 #ifdef DEBUG
     printf("\ntask_yield - BEFORE - [%d]", taskExec->id);
 #endif
 }
 void after_task_yield () {
     // put your customization here
+    int parcial_processor_time = _systemTime - taskExec->last_activation_time;
+    taskExec->processor_time += parcial_processor_time;
 #ifdef DEBUG
     printf("\ntask_yield - AFTER - [%d]", taskExec->id);
 #endif
