@@ -192,7 +192,7 @@ void after_task_exit () {
 
 void before_task_switch ( task_t *task ) {
     // put your customization here
-    if(task == taskMain && taskExec == taskDisp){
+    if(task == taskMain && taskExec == taskDisp){ //Endereço não bate aqui
         printf("Task %d exit: execution time %u ms, processor time %u ms, %u activations\n",
         taskExec->id, taskExec->execution_time, taskExec->processor_time, taskExec->activation_count);
         // Infos task dispatcher
@@ -205,7 +205,7 @@ void before_task_switch ( task_t *task ) {
 
 void after_task_switch ( task_t *task ) {
     // put your customization here
-    //taskExec->last_activation_time = _systemTime;
+    //taskExec->last_activation_time = _systemTime; Seg fault nessas duas variáveis
     //taskExec->activation_count++;
 
 #ifdef DEBUG
