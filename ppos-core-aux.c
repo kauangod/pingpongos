@@ -15,7 +15,14 @@
 #include <sys/time.h>
 #define ALPHA -1 //mod
 #define QUANTUM 20 //mod
-unsigned int _systemTime; //mod
+unsigned int _systemTime = 0;
+
+//perguntas:
+// task_yield
+// o handler faz task_yield?
+// setar prioridade direto?
+// só seta a prio_s mesmo?
+// posso copiar do timer.c?
 
 // estrutura que define um tratador de sinal (deve ser global ou static)
 struct sigaction action ;
@@ -27,11 +34,16 @@ struct itimerval timer ;
 void handler (int signum)
 {   
     _systemTime++;
-    if(taskExec->userTask){
-        taskExec->ticks--;
-        if(taskExec->ticks <= 0) //==0 não funciona (?)
-            task_yield();
-    }
+    if(preemption)
+        if(taskExec->userTask){
+            taskExec->ticks--;
+            if(taskExec->ticks == 0){
+                //printf("%d\n", taskExec->id);
+                task_yield();
+                taskExec->ticks = QUANTUM; //precisa de semaforo? pode trocar de contexto antes do yield?
+                // preemption = 1;
+            }
+        }
 }
 
 task_t * scheduler(){ 
@@ -39,11 +51,17 @@ task_t * scheduler(){
         printf("Fila de tarefas prontas vazia\n");
         return NULL;
     }
+    // if(preemption == 1){
+    //     preemption = 0;
+    //     task_yield();
+    //     return readyQueue;
+    // }
     task_t *first = readyQueue;
     if(first != first->next){
         int maxPrio = 21;
         task_t *taskMaxPrio = NULL;
         task_t *task = first;
+
         do{
             if(task->prio_d < maxPrio){
                 maxPrio = task->prio_d;
@@ -56,7 +74,7 @@ task_t * scheduler(){
 
         do{
             if(task != taskMaxPrio){
-                task->prio_d = task->prio_d + ALPHA;
+                task->prio_d = task->prio_d + ALPHA; //deveria ter uma função?
             }
             task = task->next;
         }while(task!=first);
@@ -74,7 +92,8 @@ void task_setprio (task_t *task, int prio){ //nao deveria alterar a prio_d tbm?
     }
     if(task == NULL){
         taskExec->prio_s = prio;
-    } else {
+    }
+    else{
         task->prio_s = prio;
     }
 }
@@ -100,27 +119,30 @@ void before_ppos_init () {
 void after_ppos_init () {
     //copiado do timer.c
     // registra a ação para o sinal de timer SIGALRM
-  action.sa_handler = handler ;
-  sigemptyset (&action.sa_mask) ;
-  action.sa_flags = 0 ;
-  if (sigaction (SIGALRM, &action, 0) < 0)
-  {
-    perror ("Erro em sigaction: ") ;
-    exit (1) ;
-  }
+    action.sa_handler = handler ;
+    sigemptyset (&action.sa_mask) ;
+    action.sa_flags = 0 ;
+    if (sigaction (SIGALRM, &action, 0) < 0)
+    {
+        perror ("Erro em sigaction: ") ;
+        exit (1) ;
+    }
 
-  // ajusta valores do temporizador
-  timer.it_value.tv_usec = 1000 ;      // primeiro disparo, em micro-segundos
-  timer.it_value.tv_sec  = 0 ;      // primeiro disparo, em segundos
-  timer.it_interval.tv_usec = 1000 ;   // disparos subsequentes, em micro-segundos
-  timer.it_interval.tv_sec  = 0 ;   // disparos subsequentes, em segundos
+    // ajusta valores do temporizador
+    timer.it_value.tv_usec = 1000 ;      // primeiro disparo, em micro-segundos
+    timer.it_value.tv_sec  = 0 ;      // primeiro disparo, em segundos
+    timer.it_interval.tv_usec = 1000 ;   // disparos subsequentes, em micro-segundos
+    timer.it_interval.tv_sec  = 0 ;   // disparos subsequentes, em segundos
 
-  // arma o temporizador ITIMER_REAL (vide man setitimer)
-  if (setitimer (ITIMER_REAL, &timer, 0) < 0)
-  {
-    perror ("Erro em setitimer: ") ;
-    exit (1) ;
-  }
+    // arma o temporizador ITIMER_REAL (vide man setitimer)
+    if (setitimer (ITIMER_REAL, &timer, 0) < 0)
+    {
+        perror ("Erro em setitimer: ") ;
+        exit (1) ;
+    }
+
+//   preemption = 0; //mod
+
 #ifdef DEBUG
     printf("\ninit - AFTER");
 #endif
