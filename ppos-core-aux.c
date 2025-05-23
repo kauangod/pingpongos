@@ -10,12 +10,12 @@
 // estruturas e funções
 //
 // ****************************************************************************
-
 #include <signal.h>
 #include <sys/time.h>
 #define ALPHA -1 //mod
 #define QUANTUM 20 //mod
-#define DEBUG
+#define NUMBER_OF_TASKS_JOINED 4 //mod
+// #define DEBUG
 unsigned int _systemTime = 0;
 
 // estrutura que define um tratador de sinal (deve ser global ou static)
@@ -24,6 +24,11 @@ struct sigaction action ;
 // estrutura de inicialização to timer
 struct itimerval timer ;
 
+//verifica se é a primeira vez que há a troca
+int its_first_time = 0;
+
+// verifica se a task main terminou
+int finished = 0;
 // tratador do sinal
 void handler (int signum)
 {
@@ -32,10 +37,8 @@ void handler (int signum)
         if(taskExec->userTask){
             taskExec->ticks--;
             if(taskExec->ticks == 0){
-                //printf("%d\n", taskExec->id);
+                taskExec->ticks = QUANTUM;
                 task_yield();
-                taskExec->ticks = QUANTUM; //precisa de semaforo? pode trocar de contexto antes do yield?
-                // preemption = 1;
             }
         }
 }
@@ -45,11 +48,7 @@ task_t* scheduler(){
         printf("Fila de tarefas prontas vazia\n");
         return NULL;
     }
-    // if(preemption == 1){
-    //     preemption = 0;
-    //     task_yield();
-    //     return readyQueue;
-    // }
+
     task_t *first = readyQueue;
     if(first != first->next){
         int maxPrio = 21;
@@ -86,9 +85,11 @@ void task_setprio (task_t *task, int prio){ //nao deveria alterar a prio_d tbm?
     }
     if(task == NULL){
         taskExec->prio_s = prio;
+        taskExec->prio_d = prio;
     }
     else{
         task->prio_s = prio;
+        task->prio_d = prio;
     }
 }
 
@@ -105,6 +106,17 @@ unsigned int systime (){
 
 void before_ppos_init () {
     // put your customization here
+    // printf ("%p\n", taskMain);
+    // if(!taskExec->create_time){
+    //     taskMain = taskExec;
+    //     printf ("%p\n", taskMain);
+    //     taskExec->create_time = _systemTime;
+    //     taskExec->activation_count = 0;
+    //     taskExec->processor_time = 0;
+    //     taskExec->execution_time = 0;
+    //     taskExec->last_activation_time = 0;
+    //     taskExec->userTask = 0;
+    // }
 #ifdef DEBUG
     printf("\ninit - BEFORE");
 #endif
@@ -134,9 +146,7 @@ void after_ppos_init () {
         perror ("Erro em setitimer: ") ;
         exit (1) ;
     }
-    taskMain->last_activation_time = _systemTime; // main tempo de ativação (0)
-    taskMain->activation_count = 1; // main contador de ativações (1)
-//   preemption = 0; //mod
+
 
 #ifdef DEBUG
     printf("\ninit - AFTER");
@@ -160,8 +170,10 @@ void after_task_create(task_t *task){
     task->execution_time = 0;
     task->last_activation_time = 0;
 
-    if(task == taskDisp || task == taskMain){
+    if(task->id == 1){
+        its_first_time = 1;
         task->userTask = 0;
+        taskDisp = task;
     }
     else{
         task->userTask = 1;
@@ -174,7 +186,8 @@ void after_task_create(task_t *task){
 
 void before_task_exit () {
     // put your customization here
-    taskExec->execution_time = _systemTime - taskExec->create_time;
+    if(taskExec->id != 0 && taskExec->id != 1)
+        taskExec->execution_time = _systemTime - taskExec->create_time;
 #ifdef DEBUG
     printf("\ntask_exit - BEFORE - [%d]", taskExec->id);
 #endif
@@ -192,11 +205,18 @@ void after_task_exit () {
 
 void before_task_switch ( task_t *task ) {
     // put your customization here
-    if(task == taskMain && taskExec == taskDisp){ //Endereço não bate aqui
-        printf("Task %d exit: execution time %u ms, processor time %u ms, %u activations\n",
-        taskExec->id, taskExec->execution_time, taskExec->processor_time, taskExec->activation_count);
-        // Infos task dispatcher
+    // print_tcb(taskExec);
+    if(taskExec->id == 1 && task->id == 0 && countTasks == 1){
+        taskExec->execution_time = _systemTime - taskExec->create_time;
+        taskExec->processor_time = _systemTime - taskExec->last_activation_time;
+        if (!its_first_time){
+            printf("Task %d exit: execution time %u ms, processor time %u ms, %u activations\n",
+            taskExec->id, taskExec->execution_time, taskExec->processor_time, taskExec->activation_count); // Infos task dispatcher levando em consideração que na                                                                              // sua última execução ele passa o processador para a main.
+        }
+        its_first_time = 0;
     }
+
+
 #ifdef DEBUG
     printf("\ntask_switch - BEFORE - [%d -> %d]", taskExec->id, task->id);
 #endif
@@ -204,9 +224,16 @@ void before_task_switch ( task_t *task ) {
 }
 
 void after_task_switch ( task_t *task ) {
-    // put your customization here
-    //taskExec->last_activation_time = _systemTime; Seg fault nessas duas variáveis
-    //taskExec->activation_count++;
+    // put your customization here;
+    if (task->id != 1)
+        {task->last_activation_time = _systemTime; // Desse jeito está funcionando, mas não marca o processor time do dispatcher e nem suas ativações.
+        task->activation_count++;
+        return;}
+
+    // printf("taskExec->id: %d\n", taskExec->id);
+    // printf("taskExec->activation_count: %d\n", taskExec->activation_count);
+    // printf("taskExec->last_activation_time: %d\n", taskExec->last_activation_time);
+    // print_tcb(taskExec);
 
 #ifdef DEBUG
     printf("\ntask_switch - AFTER - [%d -> %d]", taskExec->id, task->id);
@@ -222,6 +249,9 @@ void before_task_yield () {
 }
 void after_task_yield () {
     // put your customization here
+    if(taskExec->id == 0){
+        taskMain = taskExec;
+    }
     int parcial_processor_time = _systemTime - taskExec->last_activation_time;
     taskExec->processor_time += parcial_processor_time;
 #ifdef DEBUG
@@ -274,6 +304,7 @@ void after_task_sleep () {
 
 int before_task_join (task_t *task) {
     // put your customization here
+
 #ifdef DEBUG
     printf("\ntask_join - BEFORE - [%d]", taskExec->id);
 #endif
