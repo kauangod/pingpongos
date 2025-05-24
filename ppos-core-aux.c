@@ -172,14 +172,13 @@ void after_task_create(task_t *task){
 }
 
 void before_task_exit () {
-    if(taskExec->id != 0 && taskExec->id != 1) // Faço aqui o comando porque tenho garantia que logo abaixo dele já é o task_exit
-        taskExec->execution_time = _systemTime - taskExec->create_time; // e o after pode ter uma sequência de comandos antes de chamá-lo.
 #ifdef DEBUG
     printf("\ntask_exit - BEFORE - [%d]", taskExec->id);
 #endif
 }
 
 void after_task_exit () {
+    taskExec->execution_time = _systemTime - taskExec->create_time;
     printf("Task %d exit: execution time %u ms, processor time %u ms, %u activations\n",
     taskExec->id, taskExec->execution_time, taskExec->processor_time, taskExec->activation_count);
 #ifdef DEBUG
