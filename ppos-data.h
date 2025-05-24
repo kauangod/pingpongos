@@ -23,15 +23,11 @@ typedef struct task_t
    struct task_t* joinQueue;
    int exitCode;
    unsigned int awakeTime; // used to store the time when it should be waked up
-
    void* custom_data; // internal data - do not modify!
 
    // ... (outros/novos campos deve ser adicionados APOS esse comentario)
-
    int prio_s, prio_d; // prioridade estatica e dinamica
-
    int ticks; // contador de ticks
-
    int userTask; // indica se a tarefa é de usuario ou do sistema
    unsigned int processor_time; // acumulador de tempo de processador
    unsigned int activation_count; // contador de ativações
