@@ -14,7 +14,7 @@
 #include <sys/time.h>
 #define ALPHA -1
 #define QUANTUM 20
-//#define DEBUG
+// #define DEBUG
 
 unsigned int _systemTime = 0;
 unsigned int dispatcher_activation_count = 0; //  Alternativas pois não é possível acessar as variáveis
@@ -191,7 +191,7 @@ void before_task_switch ( task_t *task ) {
     }
     if(taskExec->id == 1){
         dispatcher_processor_time += (_systemTime - dispatcher_last_activation_time);
-        if (!its_first_time && task->id == 0){
+        if (!its_first_time && task->id == 0 && countTasks == 1){
             dispatcher_execution_time = _systemTime - dispatcher_create_time;
             printf("Task %d exit: execution time %u ms, processor time %u ms, %u activations\n",
             taskExec->id, dispatcher_execution_time, dispatcher_processor_time, dispatcher_activation_count);
