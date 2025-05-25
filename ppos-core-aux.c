@@ -19,6 +19,9 @@
 unsigned int _systemTime = 0;
 unsigned int dispatcher_activation_count = 0; //  Alternativas pois não é possível acessar as variáveis
 unsigned int dispatcher_last_activation_time = 0;// do dispatcher caso a fila não esteja vazia.
+unsigned int dispatcher_create_time = 0;
+unsigned int dispatcher_processor_time = 0;
+unsigned int dispatcher_execution_time = 0;
 
 // estrutura que define um tratador de sinal (deve ser global ou static)
 struct sigaction action;
@@ -147,14 +150,18 @@ void before_task_create (task_t *task ){
 
 void after_task_create(task_t *task){
     task_setprio(task,0);
-    task->create_time = _systemTime;
-    task->activation_count = 0;
-    task->processor_time = 0;
-    task->execution_time = 0;
-    task->last_activation_time = 0;
-
-    if(task->id == 1)
+    if(task->id == 1){
         its_first_time = 1;
+        dispatcher_create_time = _systemTime;
+    }
+    else{
+        task->create_time = _systemTime;
+        task->activation_count = 0;
+        task->processor_time = 0;
+        task->execution_time = 0;
+        task->last_activation_time = 0;
+    }
+    
 
 #ifdef DEBUG
     printf("\ntask_create - AFTER - [%d]", task->id);
@@ -181,11 +188,10 @@ void before_task_switch ( task_t *task ) {
     if(task->id != 1)
         task->ticks = QUANTUM;
     if(taskExec->id == 1 && task->id == 0){
-        taskExec->execution_time = _systemTime - taskExec->create_time;
-        taskExec->processor_time += _systemTime - dispatcher_last_activation_time;
         if (!its_first_time){
+            dispatcher_execution_time = _systemTime - dispatcher_create_time;
             printf("Task %d exit: execution time %u ms, processor time %u ms, %u activations\n",
-            taskExec->id, taskExec->execution_time, taskExec->processor_time, dispatcher_activation_count);
+            taskExec->id, dispatcher_execution_time, dispatcher_processor_time, dispatcher_activation_count);
         }   // Infos task dispatcher levando em consideração que ele não utiliza o exit()
            // e perde o processador para a main.
         its_first_time = 0;
@@ -216,8 +222,12 @@ void before_task_yield () {
 }
 
 void after_task_yield () {
-    int parcial_processor_time = _systemTime - taskExec->last_activation_time;
-    taskExec->processor_time += parcial_processor_time;
+    if(taskExec->id == 1){
+        dispatcher_processor_time += (_systemTime - dispatcher_last_activation_time);
+    }
+    else{
+        taskExec->processor_time += (_systemTime - taskExec->last_activation_time);
+    }
 #ifdef DEBUG
     printf("\ntask_yield - AFTER - [%d]", taskExec->id);
 #endif
