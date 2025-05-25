@@ -55,7 +55,7 @@ task_t* scheduler (){
     else if(readyQueue == readyQueue->next){
         return readyQueue;
     }
-    
+
     task_t *first = readyQueue;
     int maxPrio = 21;
     task_t *taskMaxPrio = NULL;
@@ -161,7 +161,7 @@ void after_task_create(task_t *task){
         task->execution_time = 0;
         task->last_activation_time = 0;
     }
-    
+
 
 #ifdef DEBUG
     printf("\ntask_create - AFTER - [%d]", task->id);
@@ -185,10 +185,12 @@ void after_task_exit () {
 }
 
 void before_task_switch ( task_t *task ) {
-    if(task->id != 1)
+    if(task->id != 1){
         task->ticks = QUANTUM;
-    if(taskExec->id == 1 && task->id == 0){
-        if (!its_first_time){
+    }
+    if(taskExec->id == 1){
+        dispatcher_processor_time += (_systemTime - dispatcher_last_activation_time);
+        if (!its_first_time && task->id == 0){
             dispatcher_execution_time = _systemTime - dispatcher_create_time;
             printf("Task %d exit: execution time %u ms, processor time %u ms, %u activations\n",
             taskExec->id, dispatcher_execution_time, dispatcher_processor_time, dispatcher_activation_count);
@@ -222,12 +224,7 @@ void before_task_yield () {
 }
 
 void after_task_yield () {
-    if(taskExec->id == 1){
-        dispatcher_processor_time += (_systemTime - dispatcher_last_activation_time);
-    }
-    else{
-        taskExec->processor_time += (_systemTime - taskExec->last_activation_time);
-    }
+    taskExec->processor_time += (_systemTime - taskExec->last_activation_time);
 #ifdef DEBUG
     printf("\ntask_yield - AFTER - [%d]", taskExec->id);
 #endif
