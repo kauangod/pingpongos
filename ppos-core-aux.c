@@ -114,6 +114,7 @@ void before_ppos_init () {
 }
 
 void after_ppos_init () {
+    task_setprio(taskMain, 0);
     // Código adaptado do arquivo timer.c
     // registra a ação para o sinal de timer SIGALRM
     action.sa_handler = handler ;
