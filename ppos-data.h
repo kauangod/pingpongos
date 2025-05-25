@@ -28,7 +28,6 @@ typedef struct task_t
    // ... (outros/novos campos deve ser adicionados APOS esse comentario)
    int prio_s, prio_d; // prioridade estatica e dinamica
    int ticks; // contador de ticks
-   int userTask; // indica se a tarefa é de usuario ou do sistema
    unsigned int processor_time; // acumulador de tempo de processador
    unsigned int activation_count; // contador de ativações
    unsigned int create_time; // tempo de criação da tarefa

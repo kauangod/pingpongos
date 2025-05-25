@@ -12,20 +12,19 @@
 // ****************************************************************************
 #include <signal.h>
 #include <sys/time.h>
-#define ALPHA -1 //mod
-#define QUANTUM 20 //mod
-#define NUMBER_OF_TASKS_JOINED 4 //mod
-// #define DEBUG
+#define ALPHA -1
+#define QUANTUM 20
+//#define DEBUG
 
 unsigned int _systemTime = 0;
 unsigned int dispatcher_activation_count = 0; //  Alternativas pois não é possível acessar as variáveis
 unsigned int dispatcher_last_activation_time = 0;// do dispatcher caso a fila não esteja vazia.
 
 // estrutura que define um tratador de sinal (deve ser global ou static)
-struct sigaction action ;
+struct sigaction action;
 
 // estrutura de inicialização to timer
-struct itimerval timer ;
+struct itimerval timer;
 
 //verifica se é a primeira vez que há a troca,
 // para não imprimir as informações do dispatcher antes do fim.
@@ -35,25 +34,25 @@ int its_first_time = 0;
 void handler (int signum)
 {
     _systemTime++; // ms
-    if(preemption)
-        if(taskExec->userTask){
+    if(preemption == 1){
+        if(taskExec->id != 1){
             taskExec->ticks--;
             if(taskExec->ticks == 0){
-                taskExec->ticks = QUANTUM;
                 task_yield();
             }
         }
+    }
 }
 
-task_t* scheduler(){
-    if(readyQueue == NULL) {
+task_t* scheduler (){
+    if(readyQueue == NULL){
         printf("Fila de tarefas prontas vazia\n");
         return NULL;
     }
     else if(readyQueue == readyQueue->next){
         return readyQueue;
     }
-
+    
     task_t *first = readyQueue;
     int maxPrio = 21;
     task_t *taskMaxPrio = NULL;
@@ -78,7 +77,6 @@ task_t* scheduler(){
 
     taskMaxPrio->prio_d = taskMaxPrio->prio_s;
     return taskMaxPrio;
-
 }
 
 void task_setprio (task_t *task, int prio){
@@ -113,7 +111,7 @@ void before_ppos_init () {
 }
 
 void after_ppos_init () {
-    //copiado do timer.c
+    // Código adaptado do arquivo timer.c
     // registra a ação para o sinal de timer SIGALRM
     action.sa_handler = handler ;
     sigemptyset (&action.sa_mask) ;
@@ -125,10 +123,10 @@ void after_ppos_init () {
     }
 
     // ajusta valores do temporizador
-    timer.it_value.tv_usec = 1000 ;      // primeiro disparo, em micro-segundos
-    timer.it_value.tv_sec  = 0 ;      // primeiro disparo, em segundos
-    timer.it_interval.tv_usec = 1000 ;   // disparos subsequentes, em micro-segundos
-    timer.it_interval.tv_sec  = 0 ;   // disparos subsequentes, em segundos
+    timer.it_value.tv_usec = 1000;      // primeiro disparo, em micro-segundos
+    timer.it_value.tv_sec  = 0;      // primeiro disparo, em segundos
+    timer.it_interval.tv_usec = 1000;   // disparos subsequentes, em micro-segundos
+    timer.it_interval.tv_sec  = 0;   // disparos subsequentes, em segundos
 
     // arma o temporizador ITIMER_REAL (vide man setitimer)
     if (setitimer (ITIMER_REAL, &timer, 0) < 0)
@@ -141,29 +139,22 @@ void after_ppos_init () {
 #endif
 }
 
-void before_task_create (task_t *task ) {
+void before_task_create (task_t *task ){
 #ifdef DEBUG
     printf("\ntask_create - BEFORE - [%d]", task->id);
 #endif
 }
 
 void after_task_create(task_t *task){
-    task_setprio(task,0); //mod
-    task->ticks = QUANTUM; //mod
+    task_setprio(task,0);
     task->create_time = _systemTime;
     task->activation_count = 0;
     task->processor_time = 0;
     task->execution_time = 0;
     task->last_activation_time = 0;
 
-    if(task->id == 1){
+    if(task->id == 1)
         its_first_time = 1;
-        task->userTask = 0;
-        taskDisp = task;
-    }
-    else{
-        task->userTask = 1;
-    }
 
 #ifdef DEBUG
     printf("\ntask_create - AFTER - [%d]", task->id);
@@ -187,6 +178,8 @@ void after_task_exit () {
 }
 
 void before_task_switch ( task_t *task ) {
+    if(task->id != 1)
+        task->ticks = QUANTUM;
     if(taskExec->id == 1 && task->id == 0){
         taskExec->execution_time = _systemTime - taskExec->create_time;
         taskExec->processor_time += _systemTime - dispatcher_last_activation_time;
@@ -223,9 +216,6 @@ void before_task_yield () {
 }
 
 void after_task_yield () {
-    if(taskExec->id == 0){
-        taskMain = taskExec;
-    }
     int parcial_processor_time = _systemTime - taskExec->last_activation_time;
     taskExec->processor_time += parcial_processor_time;
 #ifdef DEBUG

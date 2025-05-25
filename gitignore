@@ -1,0 +1,6 @@
+*.pdf
+/preempcao
+/scheduler
+/dispatcher
+/prio
+/.vscode
