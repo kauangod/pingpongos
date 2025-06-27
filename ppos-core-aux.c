@@ -33,6 +33,11 @@ struct itimerval timer;
 // para não imprimir as informações do dispatcher antes do fim.
 int its_first_time = 0;
 
+diskrequest_t* disk_scheduler() {
+    
+    return NULL;
+}
+
 // tratador do sinal
 void handler (int signum)
 {

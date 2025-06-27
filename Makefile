@@ -1,35 +1,16 @@
-CFLAGS = -Wall
-dep = ppos-core-aux.c ppos-all.o queue.o
+CFLAGS = -Wall -lrt
+dep = ppos-core-aux.c ppos-all.o ppos-disk-manager.o queue.o disk-driver.o 
 
-.PHONY: all preempcao dispatcher prio scheduler
+.PHONY: all disco1
 
 all:
-	@echo "Passe 'preempcao', 'preempcao-stress', 'dispatcher', 'prio', 'scheduler'" 
+	@echo "Passe 'disco1'" 
 
-preempcao: pingpong-preempcao.c 
-	gcc $(CFLAGS) -o $@ $< $(dep)
-	./$@
-	rm -f $@
-
-preempcao-stress: pingpong-preempcao-stress.c 
-	gcc $(CFLAGS) -o $@ $< $(dep)
-	./$@
-	rm -f $@
-
-dispatcher: pingpong-dispatcher.c
-	gcc $(CFLAGS) -o $@ $< $(dep)
-	./$@
-	rm -f $@
-
-prio: pingpong-contab-prio.c
-	gcc $(CFLAGS) -o $@ $< $(dep)
-	./$@
-	rm -f $@
-	
-scheduler: pingpong-scheduler.c
+disco1: pingpong-disco1.c
 	gcc $(CFLAGS) -o $@ $< $(dep)
 	./$@
 	rm -f $@
 
 clean:
-	rm -f preempcao dispatcher prio scheduler preempcao-stress
+	rm -f disco1
+
