@@ -2,7 +2,6 @@
 #include "ppos-core-globals.h"
 #include "ppos-disk-manager.h"
 
-
 // ****************************************************************************
 // Adicione TUDO O QUE FOR NECESSARIO para realizar o seu trabalho
 // Coloque as suas modificações aqui,
@@ -14,7 +13,10 @@
 #include <sys/time.h>
 #define ALPHA -1
 #define QUANTUM 20
-// #define DEBUG
+//#define DEBUG
+//#define POLITICA 'F' //FCFS
+#define POLITICA 'S' //SSTF
+//#define POLITICA 'C' //CSCAN
 
 unsigned int _systemTime = 0;
 unsigned int dispatcher_activation_count = 0; //  Alternativas pois não é possível acessar as variáveis
@@ -33,8 +35,66 @@ struct itimerval timer;
 // para não imprimir as informações do dispatcher antes do fim.
 int its_first_time = 0;
 
-diskrequest_t* disk_scheduler(diskrequest_t* request) {
+extern disk_t disco;
+
+int pos_cabeca = 0;
+int blocos_percorridos = 0; 
+
+diskrequest_t* disk_scheduler_fcfs() {
+    if (!disco.requestQueue)
+        return NULL;
+    
+    diskrequest_t* request = disco.requestQueue;
+    int distancia = abs(request->block - pos_cabeca);
+
+    blocos_percorridos += distancia;
+    pos_cabeca = request->block;
+
+    printf("FCFS: Bloco requisitado: %d, Distância: %d, Blocos totais percorridos: %d\n", 
+           request->block, distancia, blocos_percorridos);
+
     return request;
+}
+
+diskrequest_t* disk_scheduler_sstf() {
+    if (!disco.requestQueue) 
+        return NULL;
+    
+    diskrequest_t* first = disco.requestQueue;
+    diskrequest_t* sst = first;
+
+    int distancia = 0;
+    int min_dist = abs(sst->block - pos_cabeca);
+
+    diskrequest_t* request = first;
+    do {
+        distancia = abs(request->block - pos_cabeca);
+        if(distancia < min_dist){
+            min_dist = distancia;
+            sst = request;
+        }
+        /*printf("SSTF: Verificando bloco %d, distância: %d\n", 
+               request->block, distancia);*/
+        request = request->next;
+    } while (request != first);
+    
+    blocos_percorridos += min_dist;
+    pos_cabeca = sst->block;
+    
+    printf("SSTF: Selecionado bloco %d, distância: %d, blocos percorridos: %d\n", 
+           sst->block, min_dist, blocos_percorridos);
+    
+    return request;
+}
+
+diskrequest_t* disk_scheduler(){
+    if(POLITICA == 'F')
+        return disk_scheduler_fcfs();
+    else if(POLITICA == 'S') 
+        return disk_scheduler_sstf();
+    /*else if(POLITICA == 'C')
+        return NULL;
+    */
 }
 
 // tratador do sinal
@@ -181,9 +241,18 @@ void before_task_exit () {
 }
 
 void after_task_exit () {
-    taskExec->execution_time = _systemTime - taskExec->create_time;
-    printf("Task %d exit: execution time %u ms, processor time %u ms, %u activations\n",
-    taskExec->id, taskExec->execution_time, taskExec->processor_time, taskExec->activation_count);
+    if(taskExec->id == 1){
+        dispatcher_processor_time += (_systemTime - dispatcher_last_activation_time);
+        dispatcher_execution_time = _systemTime - dispatcher_create_time;
+        printf("Task %d exit: execution time %u ms, processor time %u ms, %u activations\n",
+        taskExec->id, dispatcher_execution_time, dispatcher_processor_time, dispatcher_activation_count);
+        its_first_time = 0;
+    }
+    else{
+        taskExec->execution_time = _systemTime - taskExec->create_time;
+        printf("Task %d exit: execution time %u ms, processor time %u ms, %u activations\n",
+        taskExec->id, taskExec->execution_time, taskExec->processor_time, taskExec->activation_count);
+    }
 #ifdef DEBUG
     printf("\ntask_exit - AFTER- [%d]", taskExec->id);
 #endif
@@ -195,12 +264,6 @@ void before_task_switch ( task_t *task ) {
     }
     if(taskExec->id == 1){
         dispatcher_processor_time += (_systemTime - dispatcher_last_activation_time);
-        if (!its_first_time && task->id == 0 && countTasks == 1){
-            dispatcher_execution_time = _systemTime - dispatcher_create_time;
-            printf("Task %d exit: execution time %u ms, processor time %u ms, %u activations\n",
-            taskExec->id, dispatcher_execution_time, dispatcher_processor_time, dispatcher_activation_count);
-        }   // Infos task dispatcher levando em consideração que ele não utiliza o exit()
-           // e perde o processador para a main.
         its_first_time = 0;
     }
 #ifdef DEBUG

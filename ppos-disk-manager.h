@@ -40,8 +40,6 @@ typedef struct {
     diskrequest_t* requestQueue;
 } disk_t;
 
-
-
 // inicializacao do gerente de disco
 // retorna -1 em erro ou 0 em sucesso
 // numBlocks: tamanho do disco, em blocos
