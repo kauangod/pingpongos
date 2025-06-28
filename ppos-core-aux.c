@@ -33,13 +33,12 @@ struct itimerval timer;
 // para não imprimir as informações do dispatcher antes do fim.
 int its_first_time = 0;
 
-diskrequest_t* disk_scheduler() {
-    
-    return NULL;
+diskrequest_t* disk_scheduler(diskrequest_t* request) {
+    return request;
 }
 
 // tratador do sinal
-void handler (int signum)
+void tick_handler (int signum)
 {
     _systemTime++; // ms
     if(preemption == 1){
@@ -122,7 +121,7 @@ void after_ppos_init () {
     task_setprio(taskMain, 0);
     // Código adaptado do arquivo timer.c
     // registra a ação para o sinal de timer SIGALRM
-    action.sa_handler = handler ;
+    action.sa_handler = tick_handler ;
     sigemptyset (&action.sa_mask) ;
     action.sa_flags = 0 ;
     if (sigaction (SIGALRM, &action, 0) < 0)
