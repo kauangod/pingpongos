@@ -241,7 +241,7 @@ diskrequest_t* disk_scheduler_cscan() {
 
     if (cscan == NULL) {
         cscan = min_block_ptr;
-        dist = abs(pos_cabeca - min_block_pos);
+        dist = ((disco.numBlocks - 1) - pos_cabeca) + min_block_pos + disco.numBlocks;
         blocos_percorridos += dist;
         pos_cabeca = min_block_pos;
     }
