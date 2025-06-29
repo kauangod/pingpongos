@@ -1,0 +1,1541 @@
+    0 ms: main inicio
+    0 ms: disco contem 256 blocos de 64 bytes cada
+    0 ms: lendo bloco 0
+CSCAN: Selecionado bloco 0, distância: 0, blocos percorridos: 0
+   37 ms: buffer: [<--bloco 0000------------------------------------------------->
+]
+   37 ms: lendo bloco 1
+CSCAN: Selecionado bloco 1, distância: 1, blocos percorridos: 1
+   69 ms: buffer: [<--bloco 0001------------------------------------------------->
+]
+   69 ms: lendo bloco 2
+CSCAN: Selecionado bloco 2, distância: 1, blocos percorridos: 2
+  120 ms: buffer: [<--bloco 0002------------------------------------------------->
+]
+  120 ms: lendo bloco 3
+CSCAN: Selecionado bloco 3, distância: 1, blocos percorridos: 3
+  153 ms: buffer: [<--bloco 0003------------------------------------------------->
+]
+  153 ms: lendo bloco 4
+CSCAN: Selecionado bloco 4, distância: 1, blocos percorridos: 4
+  204 ms: buffer: [<--bloco 0004------------------------------------------------->
+]
+  204 ms: lendo bloco 5
+CSCAN: Selecionado bloco 5, distância: 1, blocos percorridos: 5
+  237 ms: buffer: [<--bloco 0005------------------------------------------------->
+]
+  237 ms: lendo bloco 6
+CSCAN: Selecionado bloco 6, distância: 1, blocos percorridos: 6
+  272 ms: buffer: [<--bloco 0006------------------------------------------------->
+]
+  272 ms: lendo bloco 7
+CSCAN: Selecionado bloco 7, distância: 1, blocos percorridos: 7
+  304 ms: buffer: [<--bloco 0007------------------------------------------------->
+]
+  304 ms: lendo bloco 8
+CSCAN: Selecionado bloco 8, distância: 1, blocos percorridos: 8
+  359 ms: buffer: [<--bloco 0008------------------------------------------------->
+]
+  359 ms: lendo bloco 9
+CSCAN: Selecionado bloco 9, distância: 1, blocos percorridos: 9
+  399 ms: buffer: [<--bloco 0009------------------------------------------------->
+]
+  400 ms: lendo bloco 10
+CSCAN: Selecionado bloco 10, distância: 1, blocos percorridos: 10
+  452 ms: buffer: [<--bloco 0010------------------------------------------------->
+]
+  452 ms: lendo bloco 11
+CSCAN: Selecionado bloco 11, distância: 1, blocos percorridos: 11
+  507 ms: buffer: [<--bloco 0011------------------------------------------------->
+]
+  507 ms: lendo bloco 12
+CSCAN: Selecionado bloco 12, distância: 1, blocos percorridos: 12
+  552 ms: buffer: [<--bloco 0012------------------------------------------------->
+]
+  552 ms: lendo bloco 13
+CSCAN: Selecionado bloco 13, distância: 1, blocos percorridos: 13
+  599 ms: buffer: [<--bloco 0013------------------------------------------------->
+]
+  599 ms: lendo bloco 14
+CSCAN: Selecionado bloco 14, distância: 1, blocos percorridos: 14
+  641 ms: buffer: [<--bloco 0014------------------------------------------------->
+]
+  641 ms: lendo bloco 15
+CSCAN: Selecionado bloco 15, distância: 1, blocos percorridos: 15
+  688 ms: buffer: [<--bloco 0015------------------------------------------------->
+]
+  688 ms: lendo bloco 16
+CSCAN: Selecionado bloco 16, distância: 1, blocos percorridos: 16
+  726 ms: buffer: [<--bloco 0016------------------------------------------------->
+]
+  726 ms: lendo bloco 17
+CSCAN: Selecionado bloco 17, distância: 1, blocos percorridos: 17
+  778 ms: buffer: [<--bloco 0017------------------------------------------------->
+]
+  778 ms: lendo bloco 18
+CSCAN: Selecionado bloco 18, distância: 1, blocos percorridos: 18
+  814 ms: buffer: [<--bloco 0018------------------------------------------------->
+]
+  814 ms: lendo bloco 19
+CSCAN: Selecionado bloco 19, distância: 1, blocos percorridos: 19
+  867 ms: buffer: [<--bloco 0019------------------------------------------------->
+]
+  867 ms: lendo bloco 20
+CSCAN: Selecionado bloco 20, distância: 1, blocos percorridos: 20
+  923 ms: buffer: [<--bloco 0020------------------------------------------------->
+]
+  923 ms: lendo bloco 21
+CSCAN: Selecionado bloco 21, distância: 1, blocos percorridos: 21
+  972 ms: buffer: [<--bloco 0021------------------------------------------------->
+]
+  972 ms: lendo bloco 22
+CSCAN: Selecionado bloco 22, distância: 1, blocos percorridos: 22
+ 1029 ms: buffer: [<--bloco 0022------------------------------------------------->
+]
+ 1029 ms: lendo bloco 23
+CSCAN: Selecionado bloco 23, distância: 1, blocos percorridos: 23
+ 1084 ms: buffer: [<--bloco 0023------------------------------------------------->
+]
+ 1084 ms: lendo bloco 24
+CSCAN: Selecionado bloco 24, distância: 1, blocos percorridos: 24
+ 1130 ms: buffer: [<--bloco 0024------------------------------------------------->
+]
+ 1130 ms: lendo bloco 25
+CSCAN: Selecionado bloco 25, distância: 1, blocos percorridos: 25
+ 1178 ms: buffer: [<--bloco 0025------------------------------------------------->
+]
+ 1179 ms: lendo bloco 26
+CSCAN: Selecionado bloco 26, distância: 1, blocos percorridos: 26
+ 1234 ms: buffer: [<--bloco 0026------------------------------------------------->
+]
+ 1234 ms: lendo bloco 27
+CSCAN: Selecionado bloco 27, distância: 1, blocos percorridos: 27
+ 1275 ms: buffer: [<--bloco 0027------------------------------------------------->
+]
+ 1275 ms: lendo bloco 28
+CSCAN: Selecionado bloco 28, distância: 1, blocos percorridos: 28
+ 1309 ms: buffer: [<--bloco 0028------------------------------------------------->
+]
+ 1309 ms: lendo bloco 29
+CSCAN: Selecionado bloco 29, distância: 1, blocos percorridos: 29
+ 1354 ms: buffer: [<--bloco 0029------------------------------------------------->
+]
+ 1354 ms: lendo bloco 30
+CSCAN: Selecionado bloco 30, distância: 1, blocos percorridos: 30
+ 1390 ms: buffer: [<--bloco 0030------------------------------------------------->
+]
+ 1390 ms: lendo bloco 31
+CSCAN: Selecionado bloco 31, distância: 1, blocos percorridos: 31
+ 1428 ms: buffer: [<--bloco 0031------------------------------------------------->
+]
+ 1428 ms: lendo bloco 32
+CSCAN: Selecionado bloco 32, distância: 1, blocos percorridos: 32
+ 1475 ms: buffer: [<--bloco 0032------------------------------------------------->
+]
+ 1475 ms: lendo bloco 33
+CSCAN: Selecionado bloco 33, distância: 1, blocos percorridos: 33
+ 1528 ms: buffer: [<--bloco 0033------------------------------------------------->
+]
+ 1528 ms: lendo bloco 34
+CSCAN: Selecionado bloco 34, distância: 1, blocos percorridos: 34
+ 1564 ms: buffer: [<--bloco 0034------------------------------------------------->
+]
+ 1564 ms: lendo bloco 35
+CSCAN: Selecionado bloco 35, distância: 1, blocos percorridos: 35
+ 1600 ms: buffer: [<--bloco 0035------------------------------------------------->
+]
+ 1600 ms: lendo bloco 36
+CSCAN: Selecionado bloco 36, distância: 1, blocos percorridos: 36
+ 1656 ms: buffer: [<--bloco 0036------------------------------------------------->
+]
+ 1657 ms: lendo bloco 37
+CSCAN: Selecionado bloco 37, distância: 1, blocos percorridos: 37
+ 1698 ms: buffer: [<--bloco 0037------------------------------------------------->
+]
+ 1698 ms: lendo bloco 38
+CSCAN: Selecionado bloco 38, distância: 1, blocos percorridos: 38
+ 1732 ms: buffer: [<--bloco 0038------------------------------------------------->
+]
+ 1732 ms: lendo bloco 39
+CSCAN: Selecionado bloco 39, distância: 1, blocos percorridos: 39
+ 1786 ms: buffer: [<--bloco 0039------------------------------------------------->
+]
+ 1786 ms: lendo bloco 40
+CSCAN: Selecionado bloco 40, distância: 1, blocos percorridos: 40
+ 1832 ms: buffer: [<--bloco 0040------------------------------------------------->
+]
+ 1832 ms: lendo bloco 41
+CSCAN: Selecionado bloco 41, distância: 1, blocos percorridos: 41
+ 1887 ms: buffer: [<--bloco 0041------------------------------------------------->
+]
+ 1887 ms: lendo bloco 42
+CSCAN: Selecionado bloco 42, distância: 1, blocos percorridos: 42
+ 1935 ms: buffer: [<--bloco 0042------------------------------------------------->
+]
+ 1935 ms: lendo bloco 43
+CSCAN: Selecionado bloco 43, distância: 1, blocos percorridos: 43
+ 1968 ms: buffer: [<--bloco 0043------------------------------------------------->
+]
+ 1968 ms: lendo bloco 44
+CSCAN: Selecionado bloco 44, distância: 1, blocos percorridos: 44
+ 2009 ms: buffer: [<--bloco 0044------------------------------------------------->
+]
+ 2009 ms: lendo bloco 45
+CSCAN: Selecionado bloco 45, distância: 1, blocos percorridos: 45
+ 2064 ms: buffer: [<--bloco 0045------------------------------------------------->
+]
+ 2065 ms: lendo bloco 46
+CSCAN: Selecionado bloco 46, distância: 1, blocos percorridos: 46
+ 2111 ms: buffer: [<--bloco 0046------------------------------------------------->
+]
+ 2111 ms: lendo bloco 47
+CSCAN: Selecionado bloco 47, distância: 1, blocos percorridos: 47
+ 2158 ms: buffer: [<--bloco 0047------------------------------------------------->
+]
+ 2158 ms: lendo bloco 48
+CSCAN: Selecionado bloco 48, distância: 1, blocos percorridos: 48
+ 2204 ms: buffer: [<--bloco 0048------------------------------------------------->
+]
+ 2204 ms: lendo bloco 49
+CSCAN: Selecionado bloco 49, distância: 1, blocos percorridos: 49
+ 2256 ms: buffer: [<--bloco 0049------------------------------------------------->
+]
+ 2256 ms: lendo bloco 50
+CSCAN: Selecionado bloco 50, distância: 1, blocos percorridos: 50
+ 2295 ms: buffer: [<--bloco 0050------------------------------------------------->
+]
+ 2295 ms: lendo bloco 51
+CSCAN: Selecionado bloco 51, distância: 1, blocos percorridos: 51
+ 2339 ms: buffer: [<--bloco 0051------------------------------------------------->
+]
+ 2339 ms: lendo bloco 52
+CSCAN: Selecionado bloco 52, distância: 1, blocos percorridos: 52
+ 2379 ms: buffer: [<--bloco 0052------------------------------------------------->
+]
+ 2379 ms: lendo bloco 53
+CSCAN: Selecionado bloco 53, distância: 1, blocos percorridos: 53
+ 2418 ms: buffer: [<--bloco 0053------------------------------------------------->
+]
+ 2418 ms: lendo bloco 54
+CSCAN: Selecionado bloco 54, distância: 1, blocos percorridos: 54
+ 2460 ms: buffer: [<--bloco 0054------------------------------------------------->
+]
+ 2460 ms: lendo bloco 55
+CSCAN: Selecionado bloco 55, distância: 1, blocos percorridos: 55
+ 2515 ms: buffer: [<--bloco 0055------------------------------------------------->
+]
+ 2516 ms: lendo bloco 56
+CSCAN: Selecionado bloco 56, distância: 1, blocos percorridos: 56
+ 2568 ms: buffer: [<--bloco 0056------------------------------------------------->
+]
+ 2568 ms: lendo bloco 57
+CSCAN: Selecionado bloco 57, distância: 1, blocos percorridos: 57
+ 2604 ms: buffer: [<--bloco 0057------------------------------------------------->
+]
+ 2604 ms: lendo bloco 58
+CSCAN: Selecionado bloco 58, distância: 1, blocos percorridos: 58
+ 2642 ms: buffer: [<--bloco 0058------------------------------------------------->
+]
+ 2642 ms: lendo bloco 59
+CSCAN: Selecionado bloco 59, distância: 1, blocos percorridos: 59
+ 2694 ms: buffer: [<--bloco 0059------------------------------------------------->
+]
+ 2694 ms: lendo bloco 60
+CSCAN: Selecionado bloco 60, distância: 1, blocos percorridos: 60
+ 2744 ms: buffer: [<--bloco 0060------------------------------------------------->
+]
+ 2744 ms: lendo bloco 61
+CSCAN: Selecionado bloco 61, distância: 1, blocos percorridos: 61
+ 2788 ms: buffer: [<--bloco 0061------------------------------------------------->
+]
+ 2788 ms: lendo bloco 62
+CSCAN: Selecionado bloco 62, distância: 1, blocos percorridos: 62
+ 2820 ms: buffer: [<--bloco 0062------------------------------------------------->
+]
+ 2820 ms: lendo bloco 63
+CSCAN: Selecionado bloco 63, distância: 1, blocos percorridos: 63
+ 2859 ms: buffer: [<--bloco 0063------------------------------------------------->
+]
+ 2859 ms: lendo bloco 64
+CSCAN: Selecionado bloco 64, distância: 1, blocos percorridos: 64
+ 2895 ms: buffer: [<--bloco 0064------------------------------------------------->
+]
+ 2895 ms: lendo bloco 65
+CSCAN: Selecionado bloco 65, distância: 1, blocos percorridos: 65
+ 2929 ms: buffer: [<--bloco 0065------------------------------------------------->
+]
+ 2930 ms: lendo bloco 66
+CSCAN: Selecionado bloco 66, distância: 1, blocos percorridos: 66
+ 2971 ms: buffer: [<--bloco 0066------------------------------------------------->
+]
+ 2971 ms: lendo bloco 67
+CSCAN: Selecionado bloco 67, distância: 1, blocos percorridos: 67
+ 3005 ms: buffer: [<--bloco 0067------------------------------------------------->
+]
+ 3005 ms: lendo bloco 68
+CSCAN: Selecionado bloco 68, distância: 1, blocos percorridos: 68
+ 3046 ms: buffer: [<--bloco 0068------------------------------------------------->
+]
+ 3046 ms: lendo bloco 69
+CSCAN: Selecionado bloco 69, distância: 1, blocos percorridos: 69
+ 3090 ms: buffer: [<--bloco 0069------------------------------------------------->
+]
+ 3090 ms: lendo bloco 70
+CSCAN: Selecionado bloco 70, distância: 1, blocos percorridos: 70
+ 3144 ms: buffer: [<--bloco 0070------------------------------------------------->
+]
+ 3144 ms: lendo bloco 71
+CSCAN: Selecionado bloco 71, distância: 1, blocos percorridos: 71
+ 3197 ms: buffer: [<--bloco 0071------------------------------------------------->
+]
+ 3197 ms: lendo bloco 72
+CSCAN: Selecionado bloco 72, distância: 1, blocos percorridos: 72
+ 3235 ms: buffer: [<--bloco 0072------------------------------------------------->
+]
+ 3235 ms: lendo bloco 73
+CSCAN: Selecionado bloco 73, distância: 1, blocos percorridos: 73
+ 3279 ms: buffer: [<--bloco 0073------------------------------------------------->
+]
+ 3280 ms: lendo bloco 74
+CSCAN: Selecionado bloco 74, distância: 1, blocos percorridos: 74
+ 3336 ms: buffer: [<--bloco 0074------------------------------------------------->
+]
+ 3336 ms: lendo bloco 75
+CSCAN: Selecionado bloco 75, distância: 1, blocos percorridos: 75
+ 3384 ms: buffer: [<--bloco 0075------------------------------------------------->
+]
+ 3384 ms: lendo bloco 76
+CSCAN: Selecionado bloco 76, distância: 1, blocos percorridos: 76
+ 3422 ms: buffer: [<--bloco 0076------------------------------------------------->
+]
+ 3422 ms: lendo bloco 77
+CSCAN: Selecionado bloco 77, distância: 1, blocos percorridos: 77
+ 3463 ms: buffer: [<--bloco 0077------------------------------------------------->
+]
+ 3463 ms: lendo bloco 78
+CSCAN: Selecionado bloco 78, distância: 1, blocos percorridos: 78
+ 3497 ms: buffer: [<--bloco 0078------------------------------------------------->
+]
+ 3497 ms: lendo bloco 79
+CSCAN: Selecionado bloco 79, distância: 1, blocos percorridos: 79
+ 3551 ms: buffer: [<--bloco 0079------------------------------------------------->
+]
+ 3551 ms: lendo bloco 80
+CSCAN: Selecionado bloco 80, distância: 1, blocos percorridos: 80
+ 3582 ms: buffer: [<--bloco 0080------------------------------------------------->
+]
+ 3582 ms: lendo bloco 81
+CSCAN: Selecionado bloco 81, distância: 1, blocos percorridos: 81
+ 3620 ms: buffer: [<--bloco 0081------------------------------------------------->
+]
+ 3620 ms: lendo bloco 82
+CSCAN: Selecionado bloco 82, distância: 1, blocos percorridos: 82
+ 3660 ms: buffer: [<--bloco 0082------------------------------------------------->
+]
+ 3661 ms: lendo bloco 83
+CSCAN: Selecionado bloco 83, distância: 1, blocos percorridos: 83
+ 3701 ms: buffer: [<--bloco 0083------------------------------------------------->
+]
+ 3701 ms: lendo bloco 84
+CSCAN: Selecionado bloco 84, distância: 1, blocos percorridos: 84
+ 3747 ms: buffer: [<--bloco 0084------------------------------------------------->
+]
+ 3747 ms: lendo bloco 85
+CSCAN: Selecionado bloco 85, distância: 1, blocos percorridos: 85
+ 3795 ms: buffer: [<--bloco 0085------------------------------------------------->
+]
+ 3795 ms: lendo bloco 86
+CSCAN: Selecionado bloco 86, distância: 1, blocos percorridos: 86
+ 3829 ms: buffer: [<--bloco 0086------------------------------------------------->
+]
+ 3829 ms: lendo bloco 87
+CSCAN: Selecionado bloco 87, distância: 1, blocos percorridos: 87
+ 3870 ms: buffer: [<--bloco 0087------------------------------------------------->
+]
+ 3870 ms: lendo bloco 88
+CSCAN: Selecionado bloco 88, distância: 1, blocos percorridos: 88
+ 3923 ms: buffer: [<--bloco 0088------------------------------------------------->
+]
+ 3924 ms: lendo bloco 89
+CSCAN: Selecionado bloco 89, distância: 1, blocos percorridos: 89
+ 3965 ms: buffer: [<--bloco 0089------------------------------------------------->
+]
+ 3965 ms: lendo bloco 90
+CSCAN: Selecionado bloco 90, distância: 1, blocos percorridos: 90
+ 4000 ms: buffer: [<--bloco 0090------------------------------------------------->
+]
+ 4000 ms: lendo bloco 91
+CSCAN: Selecionado bloco 91, distância: 1, blocos percorridos: 91
+ 4046 ms: buffer: [<--bloco 0091------------------------------------------------->
+]
+ 4046 ms: lendo bloco 92
+CSCAN: Selecionado bloco 92, distância: 1, blocos percorridos: 92
+ 4097 ms: buffer: [<--bloco 0092------------------------------------------------->
+]
+ 4097 ms: lendo bloco 93
+CSCAN: Selecionado bloco 93, distância: 1, blocos percorridos: 93
+ 4129 ms: buffer: [<--bloco 0093------------------------------------------------->
+]
+ 4129 ms: lendo bloco 94
+CSCAN: Selecionado bloco 94, distância: 1, blocos percorridos: 94
+ 4179 ms: buffer: [<--bloco 0094------------------------------------------------->
+]
+ 4180 ms: lendo bloco 95
+CSCAN: Selecionado bloco 95, distância: 1, blocos percorridos: 95
+ 4237 ms: buffer: [<--bloco 0095------------------------------------------------->
+]
+ 4237 ms: lendo bloco 96
+CSCAN: Selecionado bloco 96, distância: 1, blocos percorridos: 96
+ 4269 ms: buffer: [<--bloco 0096------------------------------------------------->
+]
+ 4269 ms: lendo bloco 97
+CSCAN: Selecionado bloco 97, distância: 1, blocos percorridos: 97
+ 4303 ms: buffer: [<--bloco 0097------------------------------------------------->
+]
+ 4303 ms: lendo bloco 98
+CSCAN: Selecionado bloco 98, distância: 1, blocos percorridos: 98
+ 4360 ms: buffer: [<--bloco 0098------------------------------------------------->
+]
+ 4360 ms: lendo bloco 99
+CSCAN: Selecionado bloco 99, distância: 1, blocos percorridos: 99
+ 4402 ms: buffer: [<--bloco 0099------------------------------------------------->
+]
+ 4402 ms: lendo bloco 100
+CSCAN: Selecionado bloco 100, distância: 1, blocos percorridos: 100
+ 4446 ms: buffer: [<--bloco 0100------------------------------------------------->
+]
+ 4446 ms: lendo bloco 101
+CSCAN: Selecionado bloco 101, distância: 1, blocos percorridos: 101
+ 4496 ms: buffer: [<--bloco 0101------------------------------------------------->
+]
+ 4497 ms: lendo bloco 102
+CSCAN: Selecionado bloco 102, distância: 1, blocos percorridos: 102
+ 4535 ms: buffer: [<--bloco 0102------------------------------------------------->
+]
+ 4535 ms: lendo bloco 103
+CSCAN: Selecionado bloco 103, distância: 1, blocos percorridos: 103
+ 4586 ms: buffer: [<--bloco 0103------------------------------------------------->
+]
+ 4586 ms: lendo bloco 104
+CSCAN: Selecionado bloco 104, distância: 1, blocos percorridos: 104
+ 4618 ms: buffer: [<--bloco 0104------------------------------------------------->
+]
+ 4618 ms: lendo bloco 105
+CSCAN: Selecionado bloco 105, distância: 1, blocos percorridos: 105
+ 4651 ms: buffer: [<--bloco 0105------------------------------------------------->
+]
+ 4652 ms: lendo bloco 106
+CSCAN: Selecionado bloco 106, distância: 1, blocos percorridos: 106
+ 4690 ms: buffer: [<--bloco 0106------------------------------------------------->
+]
+ 4690 ms: lendo bloco 107
+CSCAN: Selecionado bloco 107, distância: 1, blocos percorridos: 107
+ 4730 ms: buffer: [<--bloco 0107------------------------------------------------->
+]
+ 4731 ms: lendo bloco 108
+CSCAN: Selecionado bloco 108, distância: 1, blocos percorridos: 108
+ 4770 ms: buffer: [<--bloco 0108------------------------------------------------->
+]
+ 4770 ms: lendo bloco 109
+CSCAN: Selecionado bloco 109, distância: 1, blocos percorridos: 109
+ 4808 ms: buffer: [<--bloco 0109------------------------------------------------->
+]
+ 4808 ms: lendo bloco 110
+CSCAN: Selecionado bloco 110, distância: 1, blocos percorridos: 110
+ 4845 ms: buffer: [<--bloco 0110------------------------------------------------->
+]
+ 4845 ms: lendo bloco 111
+CSCAN: Selecionado bloco 111, distância: 1, blocos percorridos: 111
+ 4881 ms: buffer: [<--bloco 0111------------------------------------------------->
+]
+ 4881 ms: lendo bloco 112
+CSCAN: Selecionado bloco 112, distância: 1, blocos percorridos: 112
+ 4927 ms: buffer: [<--bloco 0112------------------------------------------------->
+]
+ 4927 ms: lendo bloco 113
+CSCAN: Selecionado bloco 113, distância: 1, blocos percorridos: 113
+ 4969 ms: buffer: [<--bloco 0113------------------------------------------------->
+]
+ 4969 ms: lendo bloco 114
+CSCAN: Selecionado bloco 114, distância: 1, blocos percorridos: 114
+ 5011 ms: buffer: [<--bloco 0114------------------------------------------------->
+]
+ 5011 ms: lendo bloco 115
+CSCAN: Selecionado bloco 115, distância: 1, blocos percorridos: 115
+ 5042 ms: buffer: [<--bloco 0115------------------------------------------------->
+]
+ 5042 ms: lendo bloco 116
+CSCAN: Selecionado bloco 116, distância: 1, blocos percorridos: 116
+ 5074 ms: buffer: [<--bloco 0116------------------------------------------------->
+]
+ 5074 ms: lendo bloco 117
+CSCAN: Selecionado bloco 117, distância: 1, blocos percorridos: 117
+ 5119 ms: buffer: [<--bloco 0117------------------------------------------------->
+]
+ 5119 ms: lendo bloco 118
+CSCAN: Selecionado bloco 118, distância: 1, blocos percorridos: 118
+ 5156 ms: buffer: [<--bloco 0118------------------------------------------------->
+]
+ 5156 ms: lendo bloco 119
+CSCAN: Selecionado bloco 119, distância: 1, blocos percorridos: 119
+ 5210 ms: buffer: [<--bloco 0119------------------------------------------------->
+]
+ 5211 ms: lendo bloco 120
+CSCAN: Selecionado bloco 120, distância: 1, blocos percorridos: 120
+ 5264 ms: buffer: [<--bloco 0120------------------------------------------------->
+]
+ 5264 ms: lendo bloco 121
+CSCAN: Selecionado bloco 121, distância: 1, blocos percorridos: 121
+ 5301 ms: buffer: [<--bloco 0121------------------------------------------------->
+]
+ 5301 ms: lendo bloco 122
+CSCAN: Selecionado bloco 122, distância: 1, blocos percorridos: 122
+ 5340 ms: buffer: [<--bloco 0122------------------------------------------------->
+]
+ 5340 ms: lendo bloco 123
+CSCAN: Selecionado bloco 123, distância: 1, blocos percorridos: 123
+ 5386 ms: buffer: [<--bloco 0123------------------------------------------------->
+]
+ 5386 ms: lendo bloco 124
+CSCAN: Selecionado bloco 124, distância: 1, blocos percorridos: 124
+ 5425 ms: buffer: [<--bloco 0124------------------------------------------------->
+]
+ 5425 ms: lendo bloco 125
+CSCAN: Selecionado bloco 125, distância: 1, blocos percorridos: 125
+ 5457 ms: buffer: [<--bloco 0125------------------------------------------------->
+]
+ 5457 ms: lendo bloco 126
+CSCAN: Selecionado bloco 126, distância: 1, blocos percorridos: 126
+ 5499 ms: buffer: [<--bloco 0126------------------------------------------------->
+]
+ 5499 ms: lendo bloco 127
+CSCAN: Selecionado bloco 127, distância: 1, blocos percorridos: 127
+ 5536 ms: buffer: [<--bloco 0127------------------------------------------------->
+]
+ 5536 ms: lendo bloco 128
+CSCAN: Selecionado bloco 128, distância: 1, blocos percorridos: 128
+ 5567 ms: buffer: [<--bloco 0128------------------------------------------------->
+]
+ 5568 ms: lendo bloco 129
+CSCAN: Selecionado bloco 129, distância: 1, blocos percorridos: 129
+ 5605 ms: buffer: [<--bloco 0129------------------------------------------------->
+]
+ 5605 ms: lendo bloco 130
+CSCAN: Selecionado bloco 130, distância: 1, blocos percorridos: 130
+ 5650 ms: buffer: [<--bloco 0130------------------------------------------------->
+]
+ 5650 ms: lendo bloco 131
+CSCAN: Selecionado bloco 131, distância: 1, blocos percorridos: 131
+ 5691 ms: buffer: [<--bloco 0131------------------------------------------------->
+]
+ 5691 ms: lendo bloco 132
+CSCAN: Selecionado bloco 132, distância: 1, blocos percorridos: 132
+ 5747 ms: buffer: [<--bloco 0132------------------------------------------------->
+]
+ 5747 ms: lendo bloco 133
+CSCAN: Selecionado bloco 133, distância: 1, blocos percorridos: 133
+ 5796 ms: buffer: [<--bloco 0133------------------------------------------------->
+]
+ 5796 ms: lendo bloco 134
+CSCAN: Selecionado bloco 134, distância: 1, blocos percorridos: 134
+ 5827 ms: buffer: [<--bloco 0134------------------------------------------------->
+]
+ 5827 ms: lendo bloco 135
+CSCAN: Selecionado bloco 135, distância: 1, blocos percorridos: 135
+ 5858 ms: buffer: [<--bloco 0135------------------------------------------------->
+]
+ 5858 ms: lendo bloco 136
+CSCAN: Selecionado bloco 136, distância: 1, blocos percorridos: 136
+ 5905 ms: buffer: [<--bloco 0136------------------------------------------------->
+]
+ 5905 ms: lendo bloco 137
+CSCAN: Selecionado bloco 137, distância: 1, blocos percorridos: 137
+ 5944 ms: buffer: [<--bloco 0137------------------------------------------------->
+]
+ 5944 ms: lendo bloco 138
+CSCAN: Selecionado bloco 138, distância: 1, blocos percorridos: 138
+ 5980 ms: buffer: [<--bloco 0138------------------------------------------------->
+]
+ 5981 ms: lendo bloco 139
+CSCAN: Selecionado bloco 139, distância: 1, blocos percorridos: 139
+ 6037 ms: buffer: [<--bloco 0139------------------------------------------------->
+]
+ 6037 ms: lendo bloco 140
+CSCAN: Selecionado bloco 140, distância: 1, blocos percorridos: 140
+ 6079 ms: buffer: [<--bloco 0140------------------------------------------------->
+]
+ 6079 ms: lendo bloco 141
+CSCAN: Selecionado bloco 141, distância: 1, blocos percorridos: 141
+ 6121 ms: buffer: [<--bloco 0141------------------------------------------------->
+]
+ 6121 ms: lendo bloco 142
+CSCAN: Selecionado bloco 142, distância: 1, blocos percorridos: 142
+ 6152 ms: buffer: [<--bloco 0142------------------------------------------------->
+]
+ 6152 ms: lendo bloco 143
+CSCAN: Selecionado bloco 143, distância: 1, blocos percorridos: 143
+ 6209 ms: buffer: [<--bloco 0143------------------------------------------------->
+]
+ 6209 ms: lendo bloco 144
+CSCAN: Selecionado bloco 144, distância: 1, blocos percorridos: 144
+ 6258 ms: buffer: [<--bloco 0144------------------------------------------------->
+]
+ 6258 ms: lendo bloco 145
+CSCAN: Selecionado bloco 145, distância: 1, blocos percorridos: 145
+ 6300 ms: buffer: [<--bloco 0145------------------------------------------------->
+]
+ 6300 ms: lendo bloco 146
+CSCAN: Selecionado bloco 146, distância: 1, blocos percorridos: 146
+ 6331 ms: buffer: [<--bloco 0146------------------------------------------------->
+]
+ 6331 ms: lendo bloco 147
+CSCAN: Selecionado bloco 147, distância: 1, blocos percorridos: 147
+ 6381 ms: buffer: [<--bloco 0147------------------------------------------------->
+]
+ 6381 ms: lendo bloco 148
+CSCAN: Selecionado bloco 148, distância: 1, blocos percorridos: 148
+ 6438 ms: buffer: [<--bloco 0148------------------------------------------------->
+]
+ 6438 ms: lendo bloco 149
+CSCAN: Selecionado bloco 149, distância: 1, blocos percorridos: 149
+ 6476 ms: buffer: [<--bloco 0149------------------------------------------------->
+]
+ 6476 ms: lendo bloco 150
+CSCAN: Selecionado bloco 150, distância: 1, blocos percorridos: 150
+ 6520 ms: buffer: [<--bloco 0150------------------------------------------------->
+]
+ 6520 ms: lendo bloco 151
+CSCAN: Selecionado bloco 151, distância: 1, blocos percorridos: 151
+ 6572 ms: buffer: [<--bloco 0151------------------------------------------------->
+]
+ 6572 ms: lendo bloco 152
+CSCAN: Selecionado bloco 152, distância: 1, blocos percorridos: 152
+ 6612 ms: buffer: [<--bloco 0152------------------------------------------------->
+]
+ 6613 ms: lendo bloco 153
+CSCAN: Selecionado bloco 153, distância: 1, blocos percorridos: 153
+ 6661 ms: buffer: [<--bloco 0153------------------------------------------------->
+]
+ 6661 ms: lendo bloco 154
+CSCAN: Selecionado bloco 154, distância: 1, blocos percorridos: 154
+ 6698 ms: buffer: [<--bloco 0154------------------------------------------------->
+]
+ 6698 ms: lendo bloco 155
+CSCAN: Selecionado bloco 155, distância: 1, blocos percorridos: 155
+ 6743 ms: buffer: [<--bloco 0155------------------------------------------------->
+]
+ 6743 ms: lendo bloco 156
+CSCAN: Selecionado bloco 156, distância: 1, blocos percorridos: 156
+ 6789 ms: buffer: [<--bloco 0156------------------------------------------------->
+]
+ 6789 ms: lendo bloco 157
+CSCAN: Selecionado bloco 157, distância: 1, blocos percorridos: 157
+ 6834 ms: buffer: [<--bloco 0157------------------------------------------------->
+]
+ 6834 ms: lendo bloco 158
+CSCAN: Selecionado bloco 158, distância: 1, blocos percorridos: 158
+ 6886 ms: buffer: [<--bloco 0158------------------------------------------------->
+]
+ 6886 ms: lendo bloco 159
+CSCAN: Selecionado bloco 159, distância: 1, blocos percorridos: 159
+ 6932 ms: buffer: [<--bloco 0159------------------------------------------------->
+]
+ 6933 ms: lendo bloco 160
+CSCAN: Selecionado bloco 160, distância: 1, blocos percorridos: 160
+ 6984 ms: buffer: [<--bloco 0160------------------------------------------------->
+]
+ 6984 ms: lendo bloco 161
+CSCAN: Selecionado bloco 161, distância: 1, blocos percorridos: 161
+ 7023 ms: buffer: [<--bloco 0161------------------------------------------------->
+]
+ 7023 ms: lendo bloco 162
+CSCAN: Selecionado bloco 162, distância: 1, blocos percorridos: 162
+ 7076 ms: buffer: [<--bloco 0162------------------------------------------------->
+]
+ 7076 ms: lendo bloco 163
+CSCAN: Selecionado bloco 163, distância: 1, blocos percorridos: 163
+ 7122 ms: buffer: [<--bloco 0163------------------------------------------------->
+]
+ 7122 ms: lendo bloco 164
+CSCAN: Selecionado bloco 164, distância: 1, blocos percorridos: 164
+ 7153 ms: buffer: [<--bloco 0164------------------------------------------------->
+]
+ 7153 ms: lendo bloco 165
+CSCAN: Selecionado bloco 165, distância: 1, blocos percorridos: 165
+ 7207 ms: buffer: [<--bloco 0165------------------------------------------------->
+]
+ 7207 ms: lendo bloco 166
+CSCAN: Selecionado bloco 166, distância: 1, blocos percorridos: 166
+ 7254 ms: buffer: [<--bloco 0166------------------------------------------------->
+]
+ 7255 ms: lendo bloco 167
+CSCAN: Selecionado bloco 167, distância: 1, blocos percorridos: 167
+ 7299 ms: buffer: [<--bloco 0167------------------------------------------------->
+]
+ 7299 ms: lendo bloco 168
+CSCAN: Selecionado bloco 168, distância: 1, blocos percorridos: 168
+ 7334 ms: buffer: [<--bloco 0168------------------------------------------------->
+]
+ 7334 ms: lendo bloco 169
+CSCAN: Selecionado bloco 169, distância: 1, blocos percorridos: 169
+ 7383 ms: buffer: [<--bloco 0169------------------------------------------------->
+]
+ 7383 ms: lendo bloco 170
+CSCAN: Selecionado bloco 170, distância: 1, blocos percorridos: 170
+ 7425 ms: buffer: [<--bloco 0170------------------------------------------------->
+]
+ 7425 ms: lendo bloco 171
+CSCAN: Selecionado bloco 171, distância: 1, blocos percorridos: 171
+ 7468 ms: buffer: [<--bloco 0171------------------------------------------------->
+]
+ 7468 ms: lendo bloco 172
+CSCAN: Selecionado bloco 172, distância: 1, blocos percorridos: 172
+ 7524 ms: buffer: [<--bloco 0172------------------------------------------------->
+]
+ 7524 ms: lendo bloco 173
+CSCAN: Selecionado bloco 173, distância: 1, blocos percorridos: 173
+ 7566 ms: buffer: [<--bloco 0173------------------------------------------------->
+]
+ 7566 ms: lendo bloco 174
+CSCAN: Selecionado bloco 174, distância: 1, blocos percorridos: 174
+ 7609 ms: buffer: [<--bloco 0174------------------------------------------------->
+]
+ 7609 ms: lendo bloco 175
+CSCAN: Selecionado bloco 175, distância: 1, blocos percorridos: 175
+ 7657 ms: buffer: [<--bloco 0175------------------------------------------------->
+]
+ 7658 ms: lendo bloco 176
+CSCAN: Selecionado bloco 176, distância: 1, blocos percorridos: 176
+ 7708 ms: buffer: [<--bloco 0176------------------------------------------------->
+]
+ 7708 ms: lendo bloco 177
+CSCAN: Selecionado bloco 177, distância: 1, blocos percorridos: 177
+ 7747 ms: buffer: [<--bloco 0177------------------------------------------------->
+]
+ 7747 ms: lendo bloco 178
+CSCAN: Selecionado bloco 178, distância: 1, blocos percorridos: 178
+ 7787 ms: buffer: [<--bloco 0178------------------------------------------------->
+]
+ 7787 ms: lendo bloco 179
+CSCAN: Selecionado bloco 179, distância: 1, blocos percorridos: 179
+ 7837 ms: buffer: [<--bloco 0179------------------------------------------------->
+]
+ 7837 ms: lendo bloco 180
+CSCAN: Selecionado bloco 180, distância: 1, blocos percorridos: 180
+ 7879 ms: buffer: [<--bloco 0180------------------------------------------------->
+]
+ 7880 ms: lendo bloco 181
+CSCAN: Selecionado bloco 181, distância: 1, blocos percorridos: 181
+ 7930 ms: buffer: [<--bloco 0181------------------------------------------------->
+]
+ 7930 ms: lendo bloco 182
+CSCAN: Selecionado bloco 182, distância: 1, blocos percorridos: 182
+ 7971 ms: buffer: [<--bloco 0182------------------------------------------------->
+]
+ 7971 ms: lendo bloco 183
+CSCAN: Selecionado bloco 183, distância: 1, blocos percorridos: 183
+ 8022 ms: buffer: [<--bloco 0183------------------------------------------------->
+]
+ 8022 ms: lendo bloco 184
+CSCAN: Selecionado bloco 184, distância: 1, blocos percorridos: 184
+ 8062 ms: buffer: [<--bloco 0184------------------------------------------------->
+]
+ 8062 ms: lendo bloco 185
+CSCAN: Selecionado bloco 185, distância: 1, blocos percorridos: 185
+ 8106 ms: buffer: [<--bloco 0185------------------------------------------------->
+]
+ 8106 ms: lendo bloco 186
+CSCAN: Selecionado bloco 186, distância: 1, blocos percorridos: 186
+ 8145 ms: buffer: [<--bloco 0186------------------------------------------------->
+]
+ 8145 ms: lendo bloco 187
+CSCAN: Selecionado bloco 187, distância: 1, blocos percorridos: 187
+ 8200 ms: buffer: [<--bloco 0187------------------------------------------------->
+]
+ 8200 ms: lendo bloco 188
+CSCAN: Selecionado bloco 188, distância: 1, blocos percorridos: 188
+ 8231 ms: buffer: [<--bloco 0188------------------------------------------------->
+]
+ 8231 ms: lendo bloco 189
+CSCAN: Selecionado bloco 189, distância: 1, blocos percorridos: 189
+ 8264 ms: buffer: [<--bloco 0189------------------------------------------------->
+]
+ 8265 ms: lendo bloco 190
+CSCAN: Selecionado bloco 190, distância: 1, blocos percorridos: 190
+ 8304 ms: buffer: [<--bloco 0190------------------------------------------------->
+]
+ 8304 ms: lendo bloco 191
+CSCAN: Selecionado bloco 191, distância: 1, blocos percorridos: 191
+ 8356 ms: buffer: [<--bloco 0191------------------------------------------------->
+]
+ 8356 ms: lendo bloco 192
+CSCAN: Selecionado bloco 192, distância: 1, blocos percorridos: 192
+ 8394 ms: buffer: [<--bloco 0192------------------------------------------------->
+]
+ 8394 ms: lendo bloco 193
+CSCAN: Selecionado bloco 193, distância: 1, blocos percorridos: 193
+ 8429 ms: buffer: [<--bloco 0193------------------------------------------------->
+]
+ 8429 ms: lendo bloco 194
+CSCAN: Selecionado bloco 194, distância: 1, blocos percorridos: 194
+ 8466 ms: buffer: [<--bloco 0194------------------------------------------------->
+]
+ 8466 ms: lendo bloco 195
+CSCAN: Selecionado bloco 195, distância: 1, blocos percorridos: 195
+ 8500 ms: buffer: [<--bloco 0195------------------------------------------------->
+]
+ 8500 ms: lendo bloco 196
+CSCAN: Selecionado bloco 196, distância: 1, blocos percorridos: 196
+ 8531 ms: buffer: [<--bloco 0196------------------------------------------------->
+]
+ 8531 ms: lendo bloco 197
+CSCAN: Selecionado bloco 197, distância: 1, blocos percorridos: 197
+ 8585 ms: buffer: [<--bloco 0197------------------------------------------------->
+]
+ 8585 ms: lendo bloco 198
+CSCAN: Selecionado bloco 198, distância: 1, blocos percorridos: 198
+ 8632 ms: buffer: [<--bloco 0198------------------------------------------------->
+]
+ 8633 ms: lendo bloco 199
+CSCAN: Selecionado bloco 199, distância: 1, blocos percorridos: 199
+ 8664 ms: buffer: [<--bloco 0199------------------------------------------------->
+]
+ 8664 ms: lendo bloco 200
+CSCAN: Selecionado bloco 200, distância: 1, blocos percorridos: 200
+ 8709 ms: buffer: [<--bloco 0200------------------------------------------------->
+]
+ 8709 ms: lendo bloco 201
+CSCAN: Selecionado bloco 201, distância: 1, blocos percorridos: 201
+ 8764 ms: buffer: [<--bloco 0201------------------------------------------------->
+]
+ 8764 ms: lendo bloco 202
+CSCAN: Selecionado bloco 202, distância: 1, blocos percorridos: 202
+ 8808 ms: buffer: [<--bloco 0202------------------------------------------------->
+]
+ 8808 ms: lendo bloco 203
+CSCAN: Selecionado bloco 203, distância: 1, blocos percorridos: 203
+ 8852 ms: buffer: [<--bloco 0203------------------------------------------------->
+]
+ 8852 ms: lendo bloco 204
+CSCAN: Selecionado bloco 204, distância: 1, blocos percorridos: 204
+ 8888 ms: buffer: [<--bloco 0204------------------------------------------------->
+]
+ 8888 ms: lendo bloco 205
+CSCAN: Selecionado bloco 205, distância: 1, blocos percorridos: 205
+ 8940 ms: buffer: [<--bloco 0205------------------------------------------------->
+]
+ 8940 ms: lendo bloco 206
+CSCAN: Selecionado bloco 206, distância: 1, blocos percorridos: 206
+ 8997 ms: buffer: [<--bloco 0206------------------------------------------------->
+]
+ 8998 ms: lendo bloco 207
+CSCAN: Selecionado bloco 207, distância: 1, blocos percorridos: 207
+ 9054 ms: buffer: [<--bloco 0207------------------------------------------------->
+]
+ 9054 ms: lendo bloco 208
+CSCAN: Selecionado bloco 208, distância: 1, blocos percorridos: 208
+ 9088 ms: buffer: [<--bloco 0208------------------------------------------------->
+]
+ 9088 ms: lendo bloco 209
+CSCAN: Selecionado bloco 209, distância: 1, blocos percorridos: 209
+ 9124 ms: buffer: [<--bloco 0209------------------------------------------------->
+]
+ 9124 ms: lendo bloco 210
+CSCAN: Selecionado bloco 210, distância: 1, blocos percorridos: 210
+ 9168 ms: buffer: [<--bloco 0210------------------------------------------------->
+]
+ 9168 ms: lendo bloco 211
+CSCAN: Selecionado bloco 211, distância: 1, blocos percorridos: 211
+ 9209 ms: buffer: [<--bloco 0211------------------------------------------------->
+]
+ 9209 ms: lendo bloco 212
+CSCAN: Selecionado bloco 212, distância: 1, blocos percorridos: 212
+ 9264 ms: buffer: [<--bloco 0212------------------------------------------------->
+]
+ 9264 ms: lendo bloco 213
+CSCAN: Selecionado bloco 213, distância: 1, blocos percorridos: 213
+ 9315 ms: buffer: [<--bloco 0213------------------------------------------------->
+]
+ 9315 ms: lendo bloco 214
+CSCAN: Selecionado bloco 214, distância: 1, blocos percorridos: 214
+ 9350 ms: buffer: [<--bloco 0214------------------------------------------------->
+]
+ 9350 ms: lendo bloco 215
+CSCAN: Selecionado bloco 215, distância: 1, blocos percorridos: 215
+ 9385 ms: buffer: [<--bloco 0215------------------------------------------------->
+]
+ 9385 ms: lendo bloco 216
+CSCAN: Selecionado bloco 216, distância: 1, blocos percorridos: 216
+ 9423 ms: buffer: [<--bloco 0216------------------------------------------------->
+]
+ 9423 ms: lendo bloco 217
+CSCAN: Selecionado bloco 217, distância: 1, blocos percorridos: 217
+ 9463 ms: buffer: [<--bloco 0217------------------------------------------------->
+]
+ 9463 ms: lendo bloco 218
+CSCAN: Selecionado bloco 218, distância: 1, blocos percorridos: 218
+ 9518 ms: buffer: [<--bloco 0218------------------------------------------------->
+]
+ 9518 ms: lendo bloco 219
+CSCAN: Selecionado bloco 219, distância: 1, blocos percorridos: 219
+ 9557 ms: buffer: [<--bloco 0219------------------------------------------------->
+]
+ 9557 ms: lendo bloco 220
+CSCAN: Selecionado bloco 220, distância: 1, blocos percorridos: 220
+ 9596 ms: buffer: [<--bloco 0220------------------------------------------------->
+]
+ 9597 ms: lendo bloco 221
+CSCAN: Selecionado bloco 221, distância: 1, blocos percorridos: 221
+ 9633 ms: buffer: [<--bloco 0221------------------------------------------------->
+]
+ 9633 ms: lendo bloco 222
+CSCAN: Selecionado bloco 222, distância: 1, blocos percorridos: 222
+ 9690 ms: buffer: [<--bloco 0222------------------------------------------------->
+]
+ 9690 ms: lendo bloco 223
+CSCAN: Selecionado bloco 223, distância: 1, blocos percorridos: 223
+ 9736 ms: buffer: [<--bloco 0223------------------------------------------------->
+]
+ 9736 ms: lendo bloco 224
+CSCAN: Selecionado bloco 224, distância: 1, blocos percorridos: 224
+ 9773 ms: buffer: [<--bloco 0224------------------------------------------------->
+]
+ 9773 ms: lendo bloco 225
+CSCAN: Selecionado bloco 225, distância: 1, blocos percorridos: 225
+ 9810 ms: buffer: [<--bloco 0225------------------------------------------------->
+]
+ 9810 ms: lendo bloco 226
+CSCAN: Selecionado bloco 226, distância: 1, blocos percorridos: 226
+ 9856 ms: buffer: [<--bloco 0226------------------------------------------------->
+]
+ 9856 ms: lendo bloco 227
+CSCAN: Selecionado bloco 227, distância: 1, blocos percorridos: 227
+ 9890 ms: buffer: [<--bloco 0227------------------------------------------------->
+]
+ 9890 ms: lendo bloco 228
+CSCAN: Selecionado bloco 228, distância: 1, blocos percorridos: 228
+ 9946 ms: buffer: [<--bloco 0228------------------------------------------------->
+]
+ 9946 ms: lendo bloco 229
+CSCAN: Selecionado bloco 229, distância: 1, blocos percorridos: 229
+ 9978 ms: buffer: [<--bloco 0229------------------------------------------------->
+]
+ 9978 ms: lendo bloco 230
+CSCAN: Selecionado bloco 230, distância: 1, blocos percorridos: 230
+10012 ms: buffer: [<--bloco 0230------------------------------------------------->
+]
+10012 ms: lendo bloco 231
+CSCAN: Selecionado bloco 231, distância: 1, blocos percorridos: 231
+10052 ms: buffer: [<--bloco 0231------------------------------------------------->
+]
+10052 ms: lendo bloco 232
+CSCAN: Selecionado bloco 232, distância: 1, blocos percorridos: 232
+10105 ms: buffer: [<--bloco 0232------------------------------------------------->
+]
+10105 ms: lendo bloco 233
+CSCAN: Selecionado bloco 233, distância: 1, blocos percorridos: 233
+10149 ms: buffer: [<--bloco 0233------------------------------------------------->
+]
+10149 ms: lendo bloco 234
+CSCAN: Selecionado bloco 234, distância: 1, blocos percorridos: 234
+10198 ms: buffer: [<--bloco 0234------------------------------------------------->
+]
+10198 ms: lendo bloco 235
+CSCAN: Selecionado bloco 235, distância: 1, blocos percorridos: 235
+10252 ms: buffer: [<--bloco 0235------------------------------------------------->
+]
+10253 ms: lendo bloco 236
+CSCAN: Selecionado bloco 236, distância: 1, blocos percorridos: 236
+10288 ms: buffer: [<--bloco 0236------------------------------------------------->
+]
+10288 ms: lendo bloco 237
+CSCAN: Selecionado bloco 237, distância: 1, blocos percorridos: 237
+10337 ms: buffer: [<--bloco 0237------------------------------------------------->
+]
+10337 ms: lendo bloco 238
+CSCAN: Selecionado bloco 238, distância: 1, blocos percorridos: 238
+10389 ms: buffer: [<--bloco 0238------------------------------------------------->
+]
+10389 ms: lendo bloco 239
+CSCAN: Selecionado bloco 239, distância: 1, blocos percorridos: 239
+10424 ms: buffer: [<--bloco 0239------------------------------------------------->
+]
+10424 ms: lendo bloco 240
+CSCAN: Selecionado bloco 240, distância: 1, blocos percorridos: 240
+10479 ms: buffer: [<--bloco 0240------------------------------------------------->
+]
+10479 ms: lendo bloco 241
+CSCAN: Selecionado bloco 241, distância: 1, blocos percorridos: 241
+10514 ms: buffer: [<--bloco 0241------------------------------------------------->
+]
+10514 ms: lendo bloco 242
+CSCAN: Selecionado bloco 242, distância: 1, blocos percorridos: 242
+10559 ms: buffer: [<--bloco 0242------------------------------------------------->
+]
+10559 ms: lendo bloco 243
+CSCAN: Selecionado bloco 243, distância: 1, blocos percorridos: 243
+10608 ms: buffer: [<--bloco 0243------------------------------------------------->
+]
+10608 ms: lendo bloco 244
+CSCAN: Selecionado bloco 244, distância: 1, blocos percorridos: 244
+10664 ms: buffer: [<--bloco 0244------------------------------------------------->
+]
+10665 ms: lendo bloco 245
+CSCAN: Selecionado bloco 245, distância: 1, blocos percorridos: 245
+10711 ms: buffer: [<--bloco 0245------------------------------------------------->
+]
+10711 ms: lendo bloco 246
+CSCAN: Selecionado bloco 246, distância: 1, blocos percorridos: 246
+10764 ms: buffer: [<--bloco 0246------------------------------------------------->
+]
+10764 ms: lendo bloco 247
+CSCAN: Selecionado bloco 247, distância: 1, blocos percorridos: 247
+10797 ms: buffer: [<--bloco 0247------------------------------------------------->
+]
+10797 ms: lendo bloco 248
+CSCAN: Selecionado bloco 248, distância: 1, blocos percorridos: 248
+10853 ms: buffer: [<--bloco 0248------------------------------------------------->
+]
+10853 ms: lendo bloco 249
+CSCAN: Selecionado bloco 249, distância: 1, blocos percorridos: 249
+10903 ms: buffer: [<--bloco 0249------------------------------------------------->
+]
+10903 ms: lendo bloco 250
+CSCAN: Selecionado bloco 250, distância: 1, blocos percorridos: 250
+10944 ms: buffer: [<--bloco 0250------------------------------------------------->
+]
+10944 ms: lendo bloco 251
+CSCAN: Selecionado bloco 251, distância: 1, blocos percorridos: 251
+10981 ms: buffer: [<--bloco 0251------------------------------------------------->
+]
+10981 ms: lendo bloco 252
+CSCAN: Selecionado bloco 252, distância: 1, blocos percorridos: 252
+11033 ms: buffer: [<--bloco 0252------------------------------------------------->
+]
+11033 ms: lendo bloco 253
+CSCAN: Selecionado bloco 253, distância: 1, blocos percorridos: 253
+11070 ms: buffer: [<--bloco 0253------------------------------------------------->
+]
+11071 ms: lendo bloco 254
+CSCAN: Selecionado bloco 254, distância: 1, blocos percorridos: 254
+11119 ms: buffer: [<--bloco 0254------------------------------------------------->
+]
+11119 ms: lendo bloco 255
+CSCAN: Selecionado bloco 255, distância: 1, blocos percorridos: 255
+11150 ms: buffer: [<--bloco 0255------------------------------------------------->
+]
+11150 ms: escrevendo bloco 0 com caracteres "L"
+CSCAN: Selecionado bloco 0, distância: 255, blocos percorridos: 510
+11454 ms: escrevendo bloco 1 com caracteres "<"
+CSCAN: Selecionado bloco 1, distância: 1, blocos percorridos: 511
+11500 ms: escrevendo bloco 2 com caracteres ";"
+CSCAN: Selecionado bloco 2, distância: 1, blocos percorridos: 512
+11538 ms: escrevendo bloco 3 com caracteres "O"
+CSCAN: Selecionado bloco 3, distância: 1, blocos percorridos: 513
+11584 ms: escrevendo bloco 4 com caracteres "("
+CSCAN: Selecionado bloco 4, distância: 1, blocos percorridos: 514
+11620 ms: escrevendo bloco 5 com caracteres "H"
+CSCAN: Selecionado bloco 5, distância: 1, blocos percorridos: 515
+11672 ms: escrevendo bloco 6 com caracteres "%"
+CSCAN: Selecionado bloco 6, distância: 1, blocos percorridos: 516
+11730 ms: escrevendo bloco 7 com caracteres ","
+CSCAN: Selecionado bloco 7, distância: 1, blocos percorridos: 517
+11776 ms: escrevendo bloco 8 com caracteres "="
+CSCAN: Selecionado bloco 8, distância: 1, blocos percorridos: 518
+11810 ms: escrevendo bloco 9 com caracteres "8"
+CSCAN: Selecionado bloco 9, distância: 1, blocos percorridos: 519
+11868 ms: escrevendo bloco 10 com caracteres "N"
+CSCAN: Selecionado bloco 10, distância: 1, blocos percorridos: 520
+11922 ms: escrevendo bloco 11 com caracteres "8"
+CSCAN: Selecionado bloco 11, distância: 1, blocos percorridos: 521
+11960 ms: escrevendo bloco 12 com caracteres "%"
+CSCAN: Selecionado bloco 12, distância: 1, blocos percorridos: 522
+12001 ms: escrevendo bloco 13 com caracteres "E"
+CSCAN: Selecionado bloco 13, distância: 1, blocos percorridos: 523
+12050 ms: escrevendo bloco 14 com caracteres "G"
+CSCAN: Selecionado bloco 14, distância: 1, blocos percorridos: 524
+12108 ms: escrevendo bloco 15 com caracteres "H"
+CSCAN: Selecionado bloco 15, distância: 1, blocos percorridos: 525
+12154 ms: escrevendo bloco 16 com caracteres "6"
+CSCAN: Selecionado bloco 16, distância: 1, blocos percorridos: 526
+12186 ms: escrevendo bloco 17 com caracteres ">"
+CSCAN: Selecionado bloco 17, distância: 1, blocos percorridos: 527
+12242 ms: escrevendo bloco 18 com caracteres "$"
+CSCAN: Selecionado bloco 18, distância: 1, blocos percorridos: 528
+12292 ms: escrevendo bloco 19 com caracteres "D"
+CSCAN: Selecionado bloco 19, distância: 1, blocos percorridos: 529
+12342 ms: escrevendo bloco 20 com caracteres "5"
+CSCAN: Selecionado bloco 20, distância: 1, blocos percorridos: 530
+12398 ms: escrevendo bloco 21 com caracteres "."
+CSCAN: Selecionado bloco 21, distância: 1, blocos percorridos: 531
+12455 ms: escrevendo bloco 22 com caracteres "F"
+CSCAN: Selecionado bloco 22, distância: 1, blocos percorridos: 532
+12513 ms: escrevendo bloco 23 com caracteres "("
+CSCAN: Selecionado bloco 23, distância: 1, blocos percorridos: 533
+12563 ms: escrevendo bloco 24 com caracteres "<"
+CSCAN: Selecionado bloco 24, distância: 1, blocos percorridos: 534
+12618 ms: escrevendo bloco 25 com caracteres "A"
+CSCAN: Selecionado bloco 25, distância: 1, blocos percorridos: 535
+12666 ms: escrevendo bloco 26 com caracteres "D"
+CSCAN: Selecionado bloco 26, distância: 1, blocos percorridos: 536
+12699 ms: escrevendo bloco 27 com caracteres "M"
+CSCAN: Selecionado bloco 27, distância: 1, blocos percorridos: 537
+12733 ms: escrevendo bloco 28 com caracteres "+"
+CSCAN: Selecionado bloco 28, distância: 1, blocos percorridos: 538
+12766 ms: escrevendo bloco 29 com caracteres "K"
+CSCAN: Selecionado bloco 29, distância: 1, blocos percorridos: 539
+12821 ms: escrevendo bloco 30 com caracteres "J"
+CSCAN: Selecionado bloco 30, distância: 1, blocos percorridos: 540
+12864 ms: escrevendo bloco 31 com caracteres "6"
+CSCAN: Selecionado bloco 31, distância: 1, blocos percorridos: 541
+12897 ms: escrevendo bloco 32 com caracteres "9"
+CSCAN: Selecionado bloco 32, distância: 1, blocos percorridos: 542
+12939 ms: escrevendo bloco 33 com caracteres "C"
+CSCAN: Selecionado bloco 33, distância: 1, blocos percorridos: 543
+12984 ms: escrevendo bloco 34 com caracteres "!"
+CSCAN: Selecionado bloco 34, distância: 1, blocos percorridos: 544
+13016 ms: escrevendo bloco 35 com caracteres "*"
+CSCAN: Selecionado bloco 35, distância: 1, blocos percorridos: 545
+13064 ms: escrevendo bloco 36 com caracteres "C"
+CSCAN: Selecionado bloco 36, distância: 1, blocos percorridos: 546
+13108 ms: escrevendo bloco 37 com caracteres "0"
+CSCAN: Selecionado bloco 37, distância: 1, blocos percorridos: 547
+13161 ms: escrevendo bloco 38 com caracteres "3"
+CSCAN: Selecionado bloco 38, distância: 1, blocos percorridos: 548
+13217 ms: escrevendo bloco 39 com caracteres "L"
+CSCAN: Selecionado bloco 39, distância: 1, blocos percorridos: 549
+13254 ms: escrevendo bloco 40 com caracteres "8"
+CSCAN: Selecionado bloco 40, distância: 1, blocos percorridos: 550
+13312 ms: escrevendo bloco 41 com caracteres "K"
+CSCAN: Selecionado bloco 41, distância: 1, blocos percorridos: 551
+13357 ms: escrevendo bloco 42 com caracteres "G"
+CSCAN: Selecionado bloco 42, distância: 1, blocos percorridos: 552
+13399 ms: escrevendo bloco 43 com caracteres "6"
+CSCAN: Selecionado bloco 43, distância: 1, blocos percorridos: 553
+13435 ms: escrevendo bloco 44 com caracteres "+"
+CSCAN: Selecionado bloco 44, distância: 1, blocos percorridos: 554
+13491 ms: escrevendo bloco 45 com caracteres "5"
+CSCAN: Selecionado bloco 45, distância: 1, blocos percorridos: 555
+13527 ms: escrevendo bloco 46 com caracteres "E"
+CSCAN: Selecionado bloco 46, distância: 1, blocos percorridos: 556
+13571 ms: escrevendo bloco 47 com caracteres "G"
+CSCAN: Selecionado bloco 47, distância: 1, blocos percorridos: 557
+13622 ms: escrevendo bloco 48 com caracteres "/"
+CSCAN: Selecionado bloco 48, distância: 1, blocos percorridos: 558
+13679 ms: escrevendo bloco 49 com caracteres ","
+CSCAN: Selecionado bloco 49, distância: 1, blocos percorridos: 559
+13727 ms: escrevendo bloco 50 com caracteres "A"
+CSCAN: Selecionado bloco 50, distância: 1, blocos percorridos: 560
+13765 ms: escrevendo bloco 51 com caracteres "'"
+CSCAN: Selecionado bloco 51, distância: 1, blocos percorridos: 561
+13821 ms: escrevendo bloco 52 com caracteres "."
+CSCAN: Selecionado bloco 52, distância: 1, blocos percorridos: 562
+13866 ms: escrevendo bloco 53 com caracteres "-"
+CSCAN: Selecionado bloco 53, distância: 1, blocos percorridos: 563
+13917 ms: escrevendo bloco 54 com caracteres "@"
+CSCAN: Selecionado bloco 54, distância: 1, blocos percorridos: 564
+13973 ms: escrevendo bloco 55 com caracteres "2"
+CSCAN: Selecionado bloco 55, distância: 1, blocos percorridos: 565
+14010 ms: escrevendo bloco 56 com caracteres "F"
+CSCAN: Selecionado bloco 56, distância: 1, blocos percorridos: 566
+14054 ms: escrevendo bloco 57 com caracteres "E"
+CSCAN: Selecionado bloco 57, distância: 1, blocos percorridos: 567
+14103 ms: escrevendo bloco 58 com caracteres "5"
+CSCAN: Selecionado bloco 58, distância: 1, blocos percorridos: 568
+14157 ms: escrevendo bloco 59 com caracteres "A"
+CSCAN: Selecionado bloco 59, distância: 1, blocos percorridos: 569
+14215 ms: escrevendo bloco 60 com caracteres "-"
+CSCAN: Selecionado bloco 60, distância: 1, blocos percorridos: 570
+14266 ms: escrevendo bloco 61 com caracteres "'"
+CSCAN: Selecionado bloco 61, distância: 1, blocos percorridos: 571
+14299 ms: escrevendo bloco 62 com caracteres "B"
+CSCAN: Selecionado bloco 62, distância: 1, blocos percorridos: 572
+14337 ms: escrevendo bloco 63 com caracteres "A"
+CSCAN: Selecionado bloco 63, distância: 1, blocos percorridos: 573
+14387 ms: escrevendo bloco 64 com caracteres "8"
+CSCAN: Selecionado bloco 64, distância: 1, blocos percorridos: 574
+14438 ms: escrevendo bloco 65 com caracteres "B"
+CSCAN: Selecionado bloco 65, distância: 1, blocos percorridos: 575
+14492 ms: escrevendo bloco 66 com caracteres "#"
+CSCAN: Selecionado bloco 66, distância: 1, blocos percorridos: 576
+14530 ms: escrevendo bloco 67 com caracteres "-"
+CSCAN: Selecionado bloco 67, distância: 1, blocos percorridos: 577
+14572 ms: escrevendo bloco 68 com caracteres """
+CSCAN: Selecionado bloco 68, distância: 1, blocos percorridos: 578
+14608 ms: escrevendo bloco 69 com caracteres "C"
+CSCAN: Selecionado bloco 69, distância: 1, blocos percorridos: 579
+14666 ms: escrevendo bloco 70 com caracteres "3"
+CSCAN: Selecionado bloco 70, distância: 1, blocos percorridos: 580
+14717 ms: escrevendo bloco 71 com caracteres "+"
+CSCAN: Selecionado bloco 71, distância: 1, blocos percorridos: 581
+14766 ms: escrevendo bloco 72 com caracteres "2"
+CSCAN: Selecionado bloco 72, distância: 1, blocos percorridos: 582
+14809 ms: escrevendo bloco 73 com caracteres "G"
+CSCAN: Selecionado bloco 73, distância: 1, blocos percorridos: 583
+14860 ms: escrevendo bloco 74 com caracteres "L"
+CSCAN: Selecionado bloco 74, distância: 1, blocos percorridos: 584
+14918 ms: escrevendo bloco 75 com caracteres ")"
+CSCAN: Selecionado bloco 75, distância: 1, blocos percorridos: 585
+14950 ms: escrevendo bloco 76 com caracteres "?"
+CSCAN: Selecionado bloco 76, distância: 1, blocos percorridos: 586
+15000 ms: escrevendo bloco 77 com caracteres "<"
+CSCAN: Selecionado bloco 77, distância: 1, blocos percorridos: 587
+15046 ms: escrevendo bloco 78 com caracteres "N"
+CSCAN: Selecionado bloco 78, distância: 1, blocos percorridos: 588
+15090 ms: escrevendo bloco 79 com caracteres "B"
+CSCAN: Selecionado bloco 79, distância: 1, blocos percorridos: 589
+15139 ms: escrevendo bloco 80 com caracteres "J"
+CSCAN: Selecionado bloco 80, distância: 1, blocos percorridos: 590
+15177 ms: escrevendo bloco 81 com caracteres "/"
+CSCAN: Selecionado bloco 81, distância: 1, blocos percorridos: 591
+15235 ms: escrevendo bloco 82 com caracteres "?"
+CSCAN: Selecionado bloco 82, distância: 1, blocos percorridos: 592
+15269 ms: escrevendo bloco 83 com caracteres ">"
+CSCAN: Selecionado bloco 83, distância: 1, blocos percorridos: 593
+15325 ms: escrevendo bloco 84 com caracteres "6"
+CSCAN: Selecionado bloco 84, distância: 1, blocos percorridos: 594
+15361 ms: escrevendo bloco 85 com caracteres "C"
+CSCAN: Selecionado bloco 85, distância: 1, blocos percorridos: 595
+15394 ms: escrevendo bloco 86 com caracteres "7"
+CSCAN: Selecionado bloco 86, distância: 1, blocos percorridos: 596
+15444 ms: escrevendo bloco 87 com caracteres """
+CSCAN: Selecionado bloco 87, distância: 1, blocos percorridos: 597
+15501 ms: escrevendo bloco 88 com caracteres "@"
+CSCAN: Selecionado bloco 88, distância: 1, blocos percorridos: 598
+15556 ms: escrevendo bloco 89 com caracteres "2"
+CSCAN: Selecionado bloco 89, distância: 1, blocos percorridos: 599
+15598 ms: escrevendo bloco 90 com caracteres "2"
+CSCAN: Selecionado bloco 90, distância: 1, blocos percorridos: 600
+15635 ms: escrevendo bloco 91 com caracteres "&"
+CSCAN: Selecionado bloco 91, distância: 1, blocos percorridos: 601
+15669 ms: escrevendo bloco 92 com caracteres "+"
+CSCAN: Selecionado bloco 92, distância: 1, blocos percorridos: 602
+15702 ms: escrevendo bloco 93 com caracteres "B"
+CSCAN: Selecionado bloco 93, distância: 1, blocos percorridos: 603
+15744 ms: escrevendo bloco 94 com caracteres "?"
+CSCAN: Selecionado bloco 94, distância: 1, blocos percorridos: 604
+15792 ms: escrevendo bloco 95 com caracteres "/"
+CSCAN: Selecionado bloco 95, distância: 1, blocos percorridos: 605
+15842 ms: escrevendo bloco 96 com caracteres "*"
+CSCAN: Selecionado bloco 96, distância: 1, blocos percorridos: 606
+15884 ms: escrevendo bloco 97 com caracteres "F"
+CSCAN: Selecionado bloco 97, distância: 1, blocos percorridos: 607
+15917 ms: escrevendo bloco 98 com caracteres "J"
+CSCAN: Selecionado bloco 98, distância: 1, blocos percorridos: 608
+15969 ms: escrevendo bloco 99 com caracteres "*"
+CSCAN: Selecionado bloco 99, distância: 1, blocos percorridos: 609
+16014 ms: escrevendo bloco 100 com caracteres "&"
+CSCAN: Selecionado bloco 100, distância: 1, blocos percorridos: 610
+16062 ms: escrevendo bloco 101 com caracteres "9"
+CSCAN: Selecionado bloco 101, distância: 1, blocos percorridos: 611
+16109 ms: escrevendo bloco 102 com caracteres "<"
+CSCAN: Selecionado bloco 102, distância: 1, blocos percorridos: 612
+16166 ms: escrevendo bloco 103 com caracteres "8"
+CSCAN: Selecionado bloco 103, distância: 1, blocos percorridos: 613
+16205 ms: escrevendo bloco 104 com caracteres "%"
+CSCAN: Selecionado bloco 104, distância: 1, blocos percorridos: 614
+16238 ms: escrevendo bloco 105 com caracteres ")"
+CSCAN: Selecionado bloco 105, distância: 1, blocos percorridos: 615
+16279 ms: escrevendo bloco 106 com caracteres "E"
+CSCAN: Selecionado bloco 106, distância: 1, blocos percorridos: 616
+16332 ms: escrevendo bloco 107 com caracteres ")"
+CSCAN: Selecionado bloco 107, distância: 1, blocos percorridos: 617
+16383 ms: escrevendo bloco 108 com caracteres "A"
+CSCAN: Selecionado bloco 108, distância: 1, blocos percorridos: 618
+16440 ms: escrevendo bloco 109 com caracteres ")"
+CSCAN: Selecionado bloco 109, distância: 1, blocos percorridos: 619
+16477 ms: escrevendo bloco 110 com caracteres "!"
+CSCAN: Selecionado bloco 110, distância: 1, blocos percorridos: 620
+16532 ms: escrevendo bloco 111 com caracteres ")"
+CSCAN: Selecionado bloco 111, distância: 1, blocos percorridos: 621
+16570 ms: escrevendo bloco 112 com caracteres "F"
+CSCAN: Selecionado bloco 112, distância: 1, blocos percorridos: 622
+16606 ms: escrevendo bloco 113 com caracteres "D"
+CSCAN: Selecionado bloco 113, distância: 1, blocos percorridos: 623
+16654 ms: escrevendo bloco 114 com caracteres "#"
+CSCAN: Selecionado bloco 114, distância: 1, blocos percorridos: 624
+16686 ms: escrevendo bloco 115 com caracteres "0"
+CSCAN: Selecionado bloco 115, distância: 1, blocos percorridos: 625
+16734 ms: escrevendo bloco 116 com caracteres ";"
+CSCAN: Selecionado bloco 116, distância: 1, blocos percorridos: 626
+16774 ms: escrevendo bloco 117 com caracteres "("
+CSCAN: Selecionado bloco 117, distância: 1, blocos percorridos: 627
+16823 ms: escrevendo bloco 118 com caracteres "D"
+CSCAN: Selecionado bloco 118, distância: 1, blocos percorridos: 628
+16865 ms: escrevendo bloco 119 com caracteres "4"
+CSCAN: Selecionado bloco 119, distância: 1, blocos percorridos: 629
+16922 ms: escrevendo bloco 120 com caracteres "*"
+CSCAN: Selecionado bloco 120, distância: 1, blocos percorridos: 630
+16965 ms: escrevendo bloco 121 com caracteres "2"
+CSCAN: Selecionado bloco 121, distância: 1, blocos percorridos: 631
+17008 ms: escrevendo bloco 122 com caracteres ","
+CSCAN: Selecionado bloco 122, distância: 1, blocos percorridos: 632
+17051 ms: escrevendo bloco 123 com caracteres "?"
+CSCAN: Selecionado bloco 123, distância: 1, blocos percorridos: 633
+17099 ms: escrevendo bloco 124 com caracteres "'"
+CSCAN: Selecionado bloco 124, distância: 1, blocos percorridos: 634
+17153 ms: escrevendo bloco 125 com caracteres "="
+CSCAN: Selecionado bloco 125, distância: 1, blocos percorridos: 635
+17204 ms: escrevendo bloco 126 com caracteres " "
+CSCAN: Selecionado bloco 126, distância: 1, blocos percorridos: 636
+17248 ms: escrevendo bloco 127 com caracteres "3"
+CSCAN: Selecionado bloco 127, distância: 1, blocos percorridos: 637
+17301 ms: escrevendo bloco 128 com caracteres "5"
+CSCAN: Selecionado bloco 128, distância: 1, blocos percorridos: 638
+17334 ms: escrevendo bloco 129 com caracteres "&"
+CSCAN: Selecionado bloco 129, distância: 1, blocos percorridos: 639
+17377 ms: escrevendo bloco 130 com caracteres "E"
+CSCAN: Selecionado bloco 130, distância: 1, blocos percorridos: 640
+17414 ms: escrevendo bloco 131 com caracteres "#"
+CSCAN: Selecionado bloco 131, distância: 1, blocos percorridos: 641
+17460 ms: escrevendo bloco 132 com caracteres "/"
+CSCAN: Selecionado bloco 132, distância: 1, blocos percorridos: 642
+17516 ms: escrevendo bloco 133 com caracteres "9"
+CSCAN: Selecionado bloco 133, distância: 1, blocos percorridos: 643
+17569 ms: escrevendo bloco 134 com caracteres ";"
+CSCAN: Selecionado bloco 134, distância: 1, blocos percorridos: 644
+17625 ms: escrevendo bloco 135 com caracteres "="
+CSCAN: Selecionado bloco 135, distância: 1, blocos percorridos: 645
+17673 ms: escrevendo bloco 136 com caracteres "+"
+CSCAN: Selecionado bloco 136, distância: 1, blocos percorridos: 646
+17725 ms: escrevendo bloco 137 com caracteres "$"
+CSCAN: Selecionado bloco 137, distância: 1, blocos percorridos: 647
+17760 ms: escrevendo bloco 138 com caracteres "K"
+CSCAN: Selecionado bloco 138, distância: 1, blocos percorridos: 648
+17812 ms: escrevendo bloco 139 com caracteres "%"
+CSCAN: Selecionado bloco 139, distância: 1, blocos percorridos: 649
+17854 ms: escrevendo bloco 140 com caracteres "+"
+CSCAN: Selecionado bloco 140, distância: 1, blocos percorridos: 650
+17898 ms: escrevendo bloco 141 com caracteres "K"
+CSCAN: Selecionado bloco 141, distância: 1, blocos percorridos: 651
+17937 ms: escrevendo bloco 142 com caracteres ")"
+CSCAN: Selecionado bloco 142, distância: 1, blocos percorridos: 652
+17970 ms: escrevendo bloco 143 com caracteres "A"
+CSCAN: Selecionado bloco 143, distância: 1, blocos percorridos: 653
+18013 ms: escrevendo bloco 144 com caracteres "F"
+CSCAN: Selecionado bloco 144, distância: 1, blocos percorridos: 654
+18050 ms: escrevendo bloco 145 com caracteres "G"
+CSCAN: Selecionado bloco 145, distância: 1, blocos percorridos: 655
+18108 ms: escrevendo bloco 146 com caracteres "-"
+CSCAN: Selecionado bloco 146, distância: 1, blocos percorridos: 656
+18155 ms: escrevendo bloco 147 com caracteres ","
+CSCAN: Selecionado bloco 147, distância: 1, blocos percorridos: 657
+18209 ms: escrevendo bloco 148 com caracteres "E"
+CSCAN: Selecionado bloco 148, distância: 1, blocos percorridos: 658
+18254 ms: escrevendo bloco 149 com caracteres "/"
+CSCAN: Selecionado bloco 149, distância: 1, blocos percorridos: 659
+18299 ms: escrevendo bloco 150 com caracteres "3"
+CSCAN: Selecionado bloco 150, distância: 1, blocos percorridos: 660
+18333 ms: escrevendo bloco 151 com caracteres "5"
+CSCAN: Selecionado bloco 151, distância: 1, blocos percorridos: 661
+18378 ms: escrevendo bloco 152 com caracteres "L"
+CSCAN: Selecionado bloco 152, distância: 1, blocos percorridos: 662
+18432 ms: escrevendo bloco 153 com caracteres "E"
+CSCAN: Selecionado bloco 153, distância: 1, blocos percorridos: 663
+18486 ms: escrevendo bloco 154 com caracteres "L"
+CSCAN: Selecionado bloco 154, distância: 1, blocos percorridos: 664
+18527 ms: escrevendo bloco 155 com caracteres ":"
+CSCAN: Selecionado bloco 155, distância: 1, blocos percorridos: 665
+18563 ms: escrevendo bloco 156 com caracteres "M"
+CSCAN: Selecionado bloco 156, distância: 1, blocos percorridos: 666
+18604 ms: escrevendo bloco 157 com caracteres "B"
+CSCAN: Selecionado bloco 157, distância: 1, blocos percorridos: 667
+18652 ms: escrevendo bloco 158 com caracteres "#"
+CSCAN: Selecionado bloco 158, distância: 1, blocos percorridos: 668
+18689 ms: escrevendo bloco 159 com caracteres "4"
+CSCAN: Selecionado bloco 159, distância: 1, blocos percorridos: 669
+18724 ms: escrevendo bloco 160 com caracteres "*"
+CSCAN: Selecionado bloco 160, distância: 1, blocos percorridos: 670
+18770 ms: escrevendo bloco 161 com caracteres "%"
+CSCAN: Selecionado bloco 161, distância: 1, blocos percorridos: 671
+18819 ms: escrevendo bloco 162 com caracteres "F"
+CSCAN: Selecionado bloco 162, distância: 1, blocos percorridos: 672
+18866 ms: escrevendo bloco 163 com caracteres "C"
+CSCAN: Selecionado bloco 163, distância: 1, blocos percorridos: 673
+18907 ms: escrevendo bloco 164 com caracteres "G"
+CSCAN: Selecionado bloco 164, distância: 1, blocos percorridos: 674
+18964 ms: escrevendo bloco 165 com caracteres ","
+CSCAN: Selecionado bloco 165, distância: 1, blocos percorridos: 675
+19002 ms: escrevendo bloco 166 com caracteres " "
+CSCAN: Selecionado bloco 166, distância: 1, blocos percorridos: 676
+19055 ms: escrevendo bloco 167 com caracteres "8"
+CSCAN: Selecionado bloco 167, distância: 1, blocos percorridos: 677
+19105 ms: escrevendo bloco 168 com caracteres "K"
+CSCAN: Selecionado bloco 168, distância: 1, blocos percorridos: 678
+19145 ms: escrevendo bloco 169 com caracteres "4"
+CSCAN: Selecionado bloco 169, distância: 1, blocos percorridos: 679
+19179 ms: escrevendo bloco 170 com caracteres "8"
+CSCAN: Selecionado bloco 170, distância: 1, blocos percorridos: 680
+19225 ms: escrevendo bloco 171 com caracteres "?"
+CSCAN: Selecionado bloco 171, distância: 1, blocos percorridos: 681
+19267 ms: escrevendo bloco 172 com caracteres "C"
+CSCAN: Selecionado bloco 172, distância: 1, blocos percorridos: 682
+19309 ms: escrevendo bloco 173 com caracteres "+"
+CSCAN: Selecionado bloco 173, distância: 1, blocos percorridos: 683
+19341 ms: escrevendo bloco 174 com caracteres "%"
+CSCAN: Selecionado bloco 174, distância: 1, blocos percorridos: 684
+19390 ms: escrevendo bloco 175 com caracteres "0"
+CSCAN: Selecionado bloco 175, distância: 1, blocos percorridos: 685
+19445 ms: escrevendo bloco 176 com caracteres ";"
+CSCAN: Selecionado bloco 176, distância: 1, blocos percorridos: 686
+19482 ms: escrevendo bloco 177 com caracteres "7"
+CSCAN: Selecionado bloco 177, distância: 1, blocos percorridos: 687
+19520 ms: escrevendo bloco 178 com caracteres "&"
+CSCAN: Selecionado bloco 178, distância: 1, blocos percorridos: 688
+19574 ms: escrevendo bloco 179 com caracteres "."
+CSCAN: Selecionado bloco 179, distância: 1, blocos percorridos: 689
+19618 ms: escrevendo bloco 180 com caracteres ">"
+CSCAN: Selecionado bloco 180, distância: 1, blocos percorridos: 690
+19658 ms: escrevendo bloco 181 com caracteres "G"
+CSCAN: Selecionado bloco 181, distância: 1, blocos percorridos: 691
+19708 ms: escrevendo bloco 182 com caracteres "L"
+CSCAN: Selecionado bloco 182, distância: 1, blocos percorridos: 692
+19750 ms: escrevendo bloco 183 com caracteres "*"
+CSCAN: Selecionado bloco 183, distância: 1, blocos percorridos: 693
+19794 ms: escrevendo bloco 184 com caracteres "M"
+CSCAN: Selecionado bloco 184, distância: 1, blocos percorridos: 694
+19842 ms: escrevendo bloco 185 com caracteres "0"
+CSCAN: Selecionado bloco 185, distância: 1, blocos percorridos: 695
+19875 ms: escrevendo bloco 186 com caracteres ","
+CSCAN: Selecionado bloco 186, distância: 1, blocos percorridos: 696
+19925 ms: escrevendo bloco 187 com caracteres "*"
+CSCAN: Selecionado bloco 187, distância: 1, blocos percorridos: 697
+19983 ms: escrevendo bloco 188 com caracteres "A"
+CSCAN: Selecionado bloco 188, distância: 1, blocos percorridos: 698
+20017 ms: escrevendo bloco 189 com caracteres "F"
+CSCAN: Selecionado bloco 189, distância: 1, blocos percorridos: 699
+20060 ms: escrevendo bloco 190 com caracteres "4"
+CSCAN: Selecionado bloco 190, distância: 1, blocos percorridos: 700
+20117 ms: escrevendo bloco 191 com caracteres "7"
+CSCAN: Selecionado bloco 191, distância: 1, blocos percorridos: 701
+20149 ms: escrevendo bloco 192 com caracteres "K"
+CSCAN: Selecionado bloco 192, distância: 1, blocos percorridos: 702
+20194 ms: escrevendo bloco 193 com caracteres "B"
+CSCAN: Selecionado bloco 193, distância: 1, blocos percorridos: 703
+20240 ms: escrevendo bloco 194 com caracteres "9"
+CSCAN: Selecionado bloco 194, distância: 1, blocos percorridos: 704
+20287 ms: escrevendo bloco 195 com caracteres "?"
+CSCAN: Selecionado bloco 195, distância: 1, blocos percorridos: 705
+20341 ms: escrevendo bloco 196 com caracteres "J"
+CSCAN: Selecionado bloco 196, distância: 1, blocos percorridos: 706
+20390 ms: escrevendo bloco 197 com caracteres "%"
+CSCAN: Selecionado bloco 197, distância: 1, blocos percorridos: 707
+20440 ms: escrevendo bloco 198 com caracteres "&"
+CSCAN: Selecionado bloco 198, distância: 1, blocos percorridos: 708
+20488 ms: escrevendo bloco 199 com caracteres "/"
+CSCAN: Selecionado bloco 199, distância: 1, blocos percorridos: 709
+20532 ms: escrevendo bloco 200 com caracteres ">"
+CSCAN: Selecionado bloco 200, distância: 1, blocos percorridos: 710
+20579 ms: escrevendo bloco 201 com caracteres "8"
+CSCAN: Selecionado bloco 201, distância: 1, blocos percorridos: 711
+20613 ms: escrevendo bloco 202 com caracteres "N"
+CSCAN: Selecionado bloco 202, distância: 1, blocos percorridos: 712
+20668 ms: escrevendo bloco 203 com caracteres "J"
+CSCAN: Selecionado bloco 203, distância: 1, blocos percorridos: 713
+20702 ms: escrevendo bloco 204 com caracteres "7"
+CSCAN: Selecionado bloco 204, distância: 1, blocos percorridos: 714
+20754 ms: escrevendo bloco 205 com caracteres "G"
+CSCAN: Selecionado bloco 205, distância: 1, blocos percorridos: 715
+20802 ms: escrevendo bloco 206 com caracteres "&"
+CSCAN: Selecionado bloco 206, distância: 1, blocos percorridos: 716
+20846 ms: escrevendo bloco 207 com caracteres "+"
+CSCAN: Selecionado bloco 207, distância: 1, blocos percorridos: 717
+20893 ms: escrevendo bloco 208 com caracteres "<"
+CSCAN: Selecionado bloco 208, distância: 1, blocos percorridos: 718
+20940 ms: escrevendo bloco 209 com caracteres "C"
+CSCAN: Selecionado bloco 209, distância: 1, blocos percorridos: 719
+20973 ms: escrevendo bloco 210 com caracteres "M"
+CSCAN: Selecionado bloco 210, distância: 1, blocos percorridos: 720
+21027 ms: escrevendo bloco 211 com caracteres "-"
+CSCAN: Selecionado bloco 211, distância: 1, blocos percorridos: 721
+21077 ms: escrevendo bloco 212 com caracteres "("
+CSCAN: Selecionado bloco 212, distância: 1, blocos percorridos: 722
+21116 ms: escrevendo bloco 213 com caracteres "/"
+CSCAN: Selecionado bloco 213, distância: 1, blocos percorridos: 723
+21158 ms: escrevendo bloco 214 com caracteres "#"
+CSCAN: Selecionado bloco 214, distância: 1, blocos percorridos: 724
+21196 ms: escrevendo bloco 215 com caracteres "1"
+CSCAN: Selecionado bloco 215, distância: 1, blocos percorridos: 725
+21248 ms: escrevendo bloco 216 com caracteres "-"
+CSCAN: Selecionado bloco 216, distância: 1, blocos percorridos: 726
+21288 ms: escrevendo bloco 217 com caracteres ","
+CSCAN: Selecionado bloco 217, distância: 1, blocos percorridos: 727
+21341 ms: escrevendo bloco 218 com caracteres "K"
+CSCAN: Selecionado bloco 218, distância: 1, blocos percorridos: 728
+21389 ms: escrevendo bloco 219 com caracteres "+"
+CSCAN: Selecionado bloco 219, distância: 1, blocos percorridos: 729
+21421 ms: escrevendo bloco 220 com caracteres "G"
+CSCAN: Selecionado bloco 220, distância: 1, blocos percorridos: 730
+21459 ms: escrevendo bloco 221 com caracteres ">"
+CSCAN: Selecionado bloco 221, distância: 1, blocos percorridos: 731
+21516 ms: escrevendo bloco 222 com caracteres "@"
+CSCAN: Selecionado bloco 222, distância: 1, blocos percorridos: 732
+21573 ms: escrevendo bloco 223 com caracteres "/"
+CSCAN: Selecionado bloco 223, distância: 1, blocos percorridos: 733
+21616 ms: escrevendo bloco 224 com caracteres "'"
+CSCAN: Selecionado bloco 224, distância: 1, blocos percorridos: 734
+21653 ms: escrevendo bloco 225 com caracteres "3"
+CSCAN: Selecionado bloco 225, distância: 1, blocos percorridos: 735
+21694 ms: escrevendo bloco 226 com caracteres "$"
+CSCAN: Selecionado bloco 226, distância: 1, blocos percorridos: 736
+21735 ms: escrevendo bloco 227 com caracteres "<"
+CSCAN: Selecionado bloco 227, distância: 1, blocos percorridos: 737
+21776 ms: escrevendo bloco 228 com caracteres "3"
+CSCAN: Selecionado bloco 228, distância: 1, blocos percorridos: 738
+21815 ms: escrevendo bloco 229 com caracteres "+"
+CSCAN: Selecionado bloco 229, distância: 1, blocos percorridos: 739
+21852 ms: escrevendo bloco 230 com caracteres "I"
+CSCAN: Selecionado bloco 230, distância: 1, blocos percorridos: 740
+21896 ms: escrevendo bloco 231 com caracteres "8"
+CSCAN: Selecionado bloco 231, distância: 1, blocos percorridos: 741
+21930 ms: escrevendo bloco 232 com caracteres "&"
+CSCAN: Selecionado bloco 232, distância: 1, blocos percorridos: 742
+21976 ms: escrevendo bloco 233 com caracteres """
+CSCAN: Selecionado bloco 233, distância: 1, blocos percorridos: 743
+22026 ms: escrevendo bloco 234 com caracteres "+"
+CSCAN: Selecionado bloco 234, distância: 1, blocos percorridos: 744
+22079 ms: escrevendo bloco 235 com caracteres "$"
+CSCAN: Selecionado bloco 235, distância: 1, blocos percorridos: 745
+22121 ms: escrevendo bloco 236 com caracteres "@"
+CSCAN: Selecionado bloco 236, distância: 1, blocos percorridos: 746
+22154 ms: escrevendo bloco 237 com caracteres "1"
+CSCAN: Selecionado bloco 237, distância: 1, blocos percorridos: 747
+22197 ms: escrevendo bloco 238 com caracteres "L"
+CSCAN: Selecionado bloco 238, distância: 1, blocos percorridos: 748
+22239 ms: escrevendo bloco 239 com caracteres "="
+CSCAN: Selecionado bloco 239, distância: 1, blocos percorridos: 749
+22277 ms: escrevendo bloco 240 com caracteres "3"
+CSCAN: Selecionado bloco 240, distância: 1, blocos percorridos: 750
+22313 ms: escrevendo bloco 241 com caracteres "7"
+CSCAN: Selecionado bloco 241, distância: 1, blocos percorridos: 751
+22357 ms: escrevendo bloco 242 com caracteres "!"
+CSCAN: Selecionado bloco 242, distância: 1, blocos percorridos: 752
+22403 ms: escrevendo bloco 243 com caracteres "4"
+CSCAN: Selecionado bloco 243, distância: 1, blocos percorridos: 753
+22457 ms: escrevendo bloco 244 com caracteres "?"
+CSCAN: Selecionado bloco 244, distância: 1, blocos percorridos: 754
+22500 ms: escrevendo bloco 245 com caracteres "+"
+CSCAN: Selecionado bloco 245, distância: 1, blocos percorridos: 755
+22533 ms: escrevendo bloco 246 com caracteres "="
+CSCAN: Selecionado bloco 246, distância: 1, blocos percorridos: 756
+22583 ms: escrevendo bloco 247 com caracteres "O"
+CSCAN: Selecionado bloco 247, distância: 1, blocos percorridos: 757
+22626 ms: escrevendo bloco 248 com caracteres "'"
+CSCAN: Selecionado bloco 248, distância: 1, blocos percorridos: 758
+22659 ms: escrevendo bloco 249 com caracteres "%"
+CSCAN: Selecionado bloco 249, distância: 1, blocos percorridos: 759
+22694 ms: escrevendo bloco 250 com caracteres "?"
+CSCAN: Selecionado bloco 250, distância: 1, blocos percorridos: 760
+22738 ms: escrevendo bloco 251 com caracteres "F"
+CSCAN: Selecionado bloco 251, distância: 1, blocos percorridos: 761
+22785 ms: escrevendo bloco 252 com caracteres ","
+CSCAN: Selecionado bloco 252, distância: 1, blocos percorridos: 762
+22831 ms: escrevendo bloco 253 com caracteres "O"
+CSCAN: Selecionado bloco 253, distância: 1, blocos percorridos: 763
+22868 ms: escrevendo bloco 254 com caracteres "'"
+CSCAN: Selecionado bloco 254, distância: 1, blocos percorridos: 764
+22915 ms: escrevendo bloco 255 com caracteres "K"
+CSCAN: Selecionado bloco 255, distância: 1, blocos percorridos: 765
+22957 ms: main fim
+Task 0 exit: execution time 22957 ms, processor time 31 ms, 513 activations
+Task 1 exit: execution time 22957 ms, processor time 11110 ms, 59449808 activations
