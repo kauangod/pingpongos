@@ -9,13 +9,13 @@ all:
 disco1: pingpong-disco1.c
 	@cp disk_original.dat disk.dat
 	gcc $(CFLAGS) -o $@ $< $(dep)
-	./$@
+	./$@ > output.txt
 	rm -f $@
 
 disco2: pingpong-disco2.c
 	@cp disk_original.dat disk.dat
 	gcc $(CFLAGS) -o $@ $< $(dep)
-	./$@ > felipe_lucas.txt
+	./$@ > output.txt
 	rm -f $@
 
 clean:
