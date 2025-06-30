@@ -1,21 +1,21 @@
 CFLAGS = -Wall -lrt
-dep = ppos-core-aux.c ppos-all.o queue.o disk-driver.o 
+dep = ppos-core-aux.c ppos-all.o queue.o disk-driver.o
 
 .PHONY: all disco1 disco2
 
 all:
-	@echo "Passe 'disco1' ou 'disco2'" 
+	@echo "Passe 'disco1' ou 'disco2'"
 
-disco1: pingpong-disco1.c 
+disco1: pingpong-disco1.c
 	@cp disk_original.dat disk.dat
 	gcc $(CFLAGS) -o $@ $< $(dep)
-	./$@
+	./$@ > output.txt
 	rm -f $@
 
-disco2: pingpong-disco2.c 
+disco2: pingpong-disco2.c
 	@cp disk_original.dat disk.dat
 	gcc $(CFLAGS) -o $@ $< $(dep)
-	./$@
+	./$@ > output.txt
 	rm -f $@
 
 clean:
