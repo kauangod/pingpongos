@@ -1,5 +1,5 @@
 CFLAGS = -Wall -lrt
-dep = ppos-core-aux.c ppos-all.o ppos-disk-manager.o queue.o disk-driver.o 
+dep = ppos-core-aux.c ppos-all.o queue.o disk-driver.o 
 
 .PHONY: all disco1 disco2
 

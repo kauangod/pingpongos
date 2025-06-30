@@ -44,13 +44,13 @@ typedef struct {
 // retorna -1 em erro ou 0 em sucesso
 // numBlocks: tamanho do disco, em blocos
 // blockSize: tamanho de cada bloco do disco, em bytes
-int disk_mgr_init (int *numBlocks, int *blockSize) ;
+int disk_mgr_init (int *numBlocks, int *blockSize);
 
 // leitura de um bloco, do disco para o buffer
-int disk_block_read (int block, void *buffer) ;
+int disk_block_read (int block, void *buffer);
 
 // escrita de um bloco, do buffer para o disco
-int disk_block_write (int block, void *buffer) ;
+int disk_block_write (int block, void *buffer);
 
 // escalonador de requisições do disco
 diskrequest_t* disk_scheduler();

@@ -11,11 +11,13 @@
 // ****************************************************************************
 #include <signal.h>
 #include <sys/time.h>
+#include "disk-driver.h"
+
 #define ALPHA -1
 #define QUANTUM 20
 //#define DEBUG
-//#define POLITICA 'F' //FCFS
-#define POLITICA 'S' //SSTF
+#define POLITICA 'F' //FCFS
+//#define POLITICA 'S' //SSTF
 //#define POLITICA 'C' //CSCAN
 
 unsigned int _systemTime = 0;
@@ -35,10 +37,134 @@ struct itimerval timer;
 // para não imprimir as informações do dispatcher antes do fim.
 int its_first_time = 0;
 
-extern disk_t disco;
-
 int pos_cabeca = 0;
 int blocos_percorridos = 0; 
+
+disk_t disco;
+task_t taskDiskMgr;
+
+diskrequest_t *requisicaoAtual = NULL;
+
+void disk_manager();
+void disk_handler(int signum);
+
+int disk_mgr_init (int *numBlocks, int *blockSize){
+    if(disk_cmd(DISK_CMD_INIT, 0, 0) < 0)
+        return -1;
+
+    *numBlocks = disk_cmd(DISK_CMD_DISKSIZE, 0, 0);
+    *blockSize = disk_cmd(DISK_CMD_BLOCKSIZE, 0, 0);
+
+    if(*numBlocks < 0 || *blockSize < 0)
+        return -1;
+    
+    disco.numBlocks = *numBlocks;
+    disco.blockSize = *blockSize;
+    sem_create(&disco.semaforo, 1);
+    disco.sinal = 0;
+    disco.livre = 1;
+    disco.diskQueue = NULL;
+    sem_create(&disco.semaforo_queue, 1);
+    disco.requestQueue = NULL;
+
+    action.sa_handler = disk_handler;;
+    sigemptyset(&action.sa_mask);
+    action.sa_flags = 0;
+    if (sigaction(SIGUSR1, &action, 0) < 0){
+        perror("Erro em sigaction: ");
+        exit(1);
+    }
+    
+    task_create(&taskDiskMgr, disk_manager, 0);
+    countTasks--;
+
+    return 0;
+}
+
+void disk_handler(int signum){
+    if(requisicaoAtual)
+        free(requisicaoAtual);
+    disco.sinal = 1;
+}
+
+void disk_manager(){
+    while(1){
+        sem_down(&disco.semaforo);
+        if(disco.sinal){
+            disco.sinal = 0;
+            task_resume(disco.diskQueue);
+            disco.livre = 1;
+        }
+        if(disco.livre){
+            diskrequest_t *request = disk_scheduler();
+
+            if(request){
+                sem_down(&disco.semaforo_queue);
+                queue_remove((queue_t**)&disco.requestQueue, (queue_t*)request);
+                sem_up(&disco.semaforo_queue);
+                
+                requisicaoAtual = request;
+
+                if(request->operation == DISK_CMD_READ){
+                    disk_cmd(DISK_CMD_READ, request->block, request->buffer);
+                    disco.livre = 0;
+                }
+                else if(request->operation == DISK_CMD_WRITE){
+                    disk_cmd(DISK_CMD_WRITE, request->block, request->buffer);
+                    disco.livre = 0;
+                }
+            }
+        }
+        sem_up(&disco.semaforo);
+        task_yield();
+    }
+}
+
+int disk_block_read (int block, void *buffer){
+    sem_down(&disco.semaforo);
+
+    diskrequest_t *request = (diskrequest_t*)malloc(sizeof(diskrequest_t));
+    
+    request->task = taskExec;
+    request->operation = DISK_CMD_READ;
+    request->block = block;
+    request->buffer = buffer;
+    request->next = NULL;
+    request->prev = NULL;
+
+    sem_down(&disco.semaforo_queue);
+    queue_append((queue_t**)&disco.requestQueue, (queue_t*)request);
+    sem_up(&disco.semaforo_queue);
+    sem_up(&disco.semaforo);
+
+    task_suspend(taskExec, &disco.diskQueue);
+
+    task_yield();
+    return 0;
+}
+
+int disk_block_write(int block, void *buffer){
+    sem_down(&disco.semaforo);
+
+    diskrequest_t *request = (diskrequest_t*)malloc(sizeof(diskrequest_t));
+    
+    request->task = taskExec;
+    request->operation = DISK_CMD_WRITE;
+    request->block = block;
+    request->buffer = buffer;
+    request->next = NULL;
+    request->prev = NULL;
+
+    sem_down(&disco.semaforo_queue);
+    queue_append((queue_t**)&disco.requestQueue, (queue_t*)request);
+    sem_up(&disco.semaforo_queue);
+    sem_up(&disco.semaforo);
+
+    task_suspend(taskExec, &disco.diskQueue);
+    
+    task_yield();
+    return 0;
+}
 
 diskrequest_t* disk_scheduler_fcfs() {
     if (!disco.requestQueue)
@@ -73,8 +199,6 @@ diskrequest_t* disk_scheduler_sstf() {
             min_dist = distancia;
             sst = request;
         }
-        /*printf("SSTF: Verificando bloco %d, distância: %d\n", 
-               request->block, distancia);*/
         request = request->next;
     } while (request != first);
     
@@ -84,7 +208,7 @@ diskrequest_t* disk_scheduler_sstf() {
     printf("SSTF: Selecionado bloco %d, distância: %d, blocos percorridos: %d\n", 
            sst->block, min_dist, blocos_percorridos);
     
-    return request;
+    return sst;
 }
 
 diskrequest_t* disk_scheduler(){
@@ -97,7 +221,6 @@ diskrequest_t* disk_scheduler(){
     */
 }
 
-// tratador do sinal
 void tick_handler (int signum)
 {
     _systemTime++; // ms
