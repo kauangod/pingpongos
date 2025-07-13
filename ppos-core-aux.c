@@ -41,7 +41,7 @@ int pos_cabeca = 0;
 int blocos_percorridos = 0;
 
 disk_t disco;
-task_t taskDiskMgr;
+task_t* taskDiskMgr;
 
 diskrequest_t *requisicaoAtual = NULL;
 
@@ -75,15 +75,17 @@ int disk_mgr_init (int *numBlocks, int *blockSize){
         exit(1);
     }
 
-    task_create(&taskDiskMgr, disk_manager, 0);
+    taskDiskMgr = (task_t*)malloc(sizeof(task_t));
+    task_create(taskDiskMgr, disk_manager, 0);
     countTasks--;
 
     return 0;
 }
 
 void disk_handler(int signum){
-    if(requisicaoAtual)
+    if(requisicaoAtual){
         free(requisicaoAtual);
+    }
     disco.sinal = 1;
 }
 
@@ -92,17 +94,15 @@ void disk_manager(void* arg){
         sem_down(&disco.semaforo);
         if(disco.sinal){
             disco.sinal = 0;
-            task_resume(disco.diskQueue);
             disco.livre = 1;
         }
         if(disco.livre){
             diskrequest_t *request = disk_scheduler();
-
             if(request){
                 sem_down(&disco.semaforo_queue);
                 queue_remove((queue_t**)&disco.requestQueue, (queue_t*)request);
                 sem_up(&disco.semaforo_queue);
-
+                
                 requisicaoAtual = request;
 
                 if(request->operation == DISK_CMD_READ){
@@ -113,6 +113,8 @@ void disk_manager(void* arg){
                     disk_cmd(DISK_CMD_WRITE, request->block, request->buffer);
                     disco.livre = 0;
                 }
+
+                task_resume(request->task);
             }
         }
         sem_up(&disco.semaforo);
@@ -135,9 +137,10 @@ int disk_block_read (int block, void *buffer){
     sem_down(&disco.semaforo_queue);
     queue_append((queue_t**)&disco.requestQueue, (queue_t*)request);
     sem_up(&disco.semaforo_queue);
-    sem_up(&disco.semaforo);
 
     task_suspend(taskExec, &disco.diskQueue);
+
+    sem_up(&disco.semaforo);
 
     task_yield();
     return 0;
@@ -149,7 +152,7 @@ int disk_block_write(int block, void *buffer){
     diskrequest_t *request = (diskrequest_t*)malloc(sizeof(diskrequest_t));
 
     request->task = taskExec;
-    request->operation = DISK_CMD_WRITE;
+    request->operation = DISK_CMD_WRITE; 
     request->block = block;
     request->buffer = buffer;
     request->next = NULL;
@@ -158,9 +161,10 @@ int disk_block_write(int block, void *buffer){
     sem_down(&disco.semaforo_queue);
     queue_append((queue_t**)&disco.requestQueue, (queue_t*)request);
     sem_up(&disco.semaforo_queue);
-    sem_up(&disco.semaforo);
 
     task_suspend(taskExec, &disco.diskQueue);
+
+    sem_up(&disco.semaforo);
 
     task_yield();
     return 0;
@@ -176,7 +180,7 @@ diskrequest_t* disk_scheduler_fcfs() {
     blocos_percorridos += distancia;
     pos_cabeca = request->block;
 
-    printf("FCFS: Bloco requisitado: %d, Distância: %d, Blocos totais percorridos: %d\n",
+    printf("FCFS: Selecionado bloco %d, distância: %d, blocos totais percorridos: %d\n",
            request->block, distancia, blocos_percorridos);
 
     return request;
@@ -199,8 +203,6 @@ diskrequest_t* disk_scheduler_sstf() {
             min_dist = distancia;
             sst = request;
         }
-        /*printf("SSTF: Verificando bloco %d, distância: %d\n",
-               request->block, distancia);*/
         request = request->next;
     } while (request != first);
 
